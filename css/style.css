@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    font-family: "Lato", sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal;
+}
+
+
+html {
+    background-color: #0A192F;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: white !important;
+}
+
+.navbar-brand {
+    margin-right: 2rem;
+    color: white !important;
+    font-size: 35px !important;
+}
+
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+    font-family: "Lato", sans-serif !important;
+    font-weight: 800 !important;
+}
+
+.navbar .nav-link:hover {
+    color: #64ffda !important;
+    transition: 0.5s;
+}
+
+body {
+    background-color: #0A192F !important;
+
+}
+
+/*----hero----*/
+.hero {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    background-image: url(../img/hombre-recibiendo-cargada.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0px 30px 50px rgba(0, 0, 0, 0.85);
+    position: relative; /* importante para el contexto de sticky */
+}
+
+.hero-text {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.034);
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.hero-text h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-text a {
+    color: #E0E0E0;
+    background-color: #1E2A44;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    border: 1px solid #3A8DFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: 0.8s;
+}
+
+.hero-text a:hover {
+    background-color: #3A8DFF !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
+}
+
+/*--Cards--*/
+.cards {
+    display: flex;
+    margin: 30px;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.cards h3 {
+    font-weight: 600 !important;
+    color: white !important;
+}
+
+.cards p {
+    color: white !important;
+}
+
+
+.card1,
+.card2,
+.card3 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+    height: auto;
+    background-color: #112240;
+    overflow: hidden;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.85);
+}
+
+.card1 img,
+.card2 img,
+.card3 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content a {
+    color: #E0E0E0;
+    background-color: #1E2A44;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    border: 1px solid #3A8DFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: 0.8s;
+}
+
+.card-content a:hover {
+    background-color: #3A8DFF !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
+}
+
+
+/*-3er Sección-*/
+
+.ultimaseccion {
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.95);
+    background-image: url(../img/manos-y-pies-haciendo-cargadas.jpg);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.ultimaseccion h3 {
+    font-weight: 600 !important;
+    color: white !important;
+}
+
+.ultimaseccion p {
+    color: white !important;
+
+}
+
+.ultimaseccion a {
+    color: #E0E0E0;
+    background-color: #1E2A44;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    border: 1px solid #3A8DFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: 0.8s;
+}
+
+.ultimaseccion a:hover {
+    background-color: #3A8DFF !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
+}
+
+
+
+
+
+/*-Footer-*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #112240;
+    color: #E0E0E0;
+    text-align: center;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: transform 0.5s, color 0.3s;
+}
+
+.footer-social a i {
+    font-size: 50px;
+    color: white;
+    transition: transform 0.5s;
+}
+
+.footer-social a:hover i {
+    color: #3A8DFF;
+    transform: scale(1.5);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-contact h4,
+.footer-about h4 {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #0077ff;
+}
+
+footer h4 a {
+    text-decoration: none;
+}
+
+footer h4 a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p,
+.footer-about p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/*--Contacto--*/
+
+
+.contacto {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #112240; 
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contacto h3 {
+    text-align: center;
+    color: white; 
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.contacto p {
+    text-align: center;
+    color: white; 
+    margin-bottom: 0;
+}
+
+.contacto label {
+    font-weight: 700;
+    color: #E0E0E0; 
+    align-self: flex-start;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3A8DFF;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #0A192F; 
+    color: white; 
+    box-sizing: border-box;
+}
+
+.contacto input::placeholder,
+.contacto textarea::placeholder {
+    color: #7A7A7A; 
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    outline: none;
+    border-color: #64ffda; 
+    box-shadow: 0 0 8px #64ffda;
+    background-color: #0A192F;
+}
+
+.contacto button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3A8DFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto button:hover {
+    background-color: #64ffda; 
+    color: #0A192F;
+    box-shadow: 0 0 12px #64ffda;
+}
+
+.contacto ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.contacto ul li {
+    margin: 10px 0;
+}
+
+.contacto ul a {
+    color: #3A8DFF;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.contacto ul a:hover {
+    text-decoration: underline;
+    color: #64ffda;
+}
+
+/*-Nosotros-*/
+
+.nosotros {
+    max-width: 100%;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.nosotros h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px !important;
+    font-weight: 800 !important;
+    font-size: 35px !important;
+}
+
+.nosotros p {
+    text-align: center;
+    margin-bottom: 20px !important;
+    font-size: 16px !important;
+    color: white;
+}
+
+.nosotros h4 {
+    text-align: center;
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
+    font-size: 25px !important;
+    color: white;
+}
+
+
+/*--Productos--*/
+.productos {
+    max-width: 100%;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.productos h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px !important;
+    font-weight: 800 !important;
+    font-size: 35px !important;
+}
+
+.productos p {
+    text-align: center;
+    margin-bottom: 20px !important;
+    font-size: 16px !important;
+    color: white;
+}
+
+.productos h4 {
+    text-align: center;
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
+    font-size: 25px !important;
+    font-weight: 500 !important;
+    color: white;
+}
