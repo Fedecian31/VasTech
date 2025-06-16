@@ -1,0 +1,28 @@
+//  Variables
+$color-bg: #0A192F;
+$color-secundario: #112240;
+$color-primario: #3A8DFF;
+$color-hover: #64ffda;
+$color-texto: white;
+$font-main: "Lato", sans-serif;
+
+//  Mixins
+@mixin boton-principal {
+    color: #E0E0E0;
+    background-color: #1E2A44;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    border: 1px solid $color-primario;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: 0.8s;
+}
+
+@mixin boton-hover {
+    background-color: $color-primario !important;
+    color: white !important;
+    box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
+    transform: scale(1.1);
+}

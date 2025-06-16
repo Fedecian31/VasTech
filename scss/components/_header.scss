@@ -1,0 +1,40 @@
+.navbar {
+    background-color: $color-bg !important;
+    padding: 1rem 2rem;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 36px !important;
+    font-weight: 900 !important;
+    color: $color-texto !important;
+    text-transform: uppercase;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.navbar .nav-link {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: $color-texto !important;
+    transition: color 0.3s ease, transform 0.5s;
+    padding: 0.5rem 0.75rem;
+}
+
+.navbar .nav-link:hover {
+    color: $color-primario !important;
+    transform: scale(1.2);
+}
+
+.navbar-toggler {
+    display: none !important;
+}

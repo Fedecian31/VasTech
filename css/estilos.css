@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  font-family: "Lato", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+html,
+body {
+  background-color: #0A192F !important;
+}
+
+.navbar {
+  background-color: #0A192F !important;
+  padding: 1rem 2rem;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 36px !important;
+  font-weight: 900 !important;
+  color: white !important;
+  text-transform: uppercase;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.navbar .nav-link {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: white !important;
+  transition: color 0.3s ease, transform 0.5s;
+  padding: 0.5rem 0.75rem;
+}
+
+.navbar .nav-link:hover {
+  color: #3A8DFF !important;
+  transform: scale(1.2);
+}
+
+.navbar-toggler {
+  display: none !important;
+}
+
+.hero {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 800px;
+  background-image: url(../img/hombre-recibiendo-cargada.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 0px 30px 50px rgba(0, 0, 0, 0.85);
+  position: relative;
+}
+
+.hero-text {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.034);
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  z-index: 10;
+}
+.hero-text h2 {
+  font-size: 35px !important;
+  font-weight: 700 !important;
+  margin: 0;
+}
+.hero-text a {
+  color: #E0E0E0;
+  background-color: #1E2A44;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  border: 1px solid #3A8DFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.8s;
+}
+.hero-text a:hover {
+  background-color: #3A8DFF !important;
+  color: white !important;
+  box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
+  transform: scale(1.1);
+}
+
+.cards {
+  display: flex;
+  margin: 30px;
+  padding: 10px;
+  justify-content: space-around;
+}
+.cards h3,
+.cards p {
+  color: white !important;
+}
+
+.card1,
+.card2,
+.card3 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 300px;
+  background-color: #112240;
+  overflow: hidden;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.85);
+}
+.card1 img,
+.card2 img,
+.card3 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card1 .card-content,
+.card2 .card-content,
+.card3 .card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.card1 .card-content a,
+.card2 .card-content a,
+.card3 .card-content a {
+  color: #E0E0E0;
+  background-color: #1E2A44;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  border: 1px solid #3A8DFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.8s;
+}
+.card1 .card-content a:hover,
+.card2 .card-content a:hover,
+.card3 .card-content a:hover {
+  background-color: #3A8DFF !important;
+  color: white !important;
+  box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
+  transform: scale(1.1);
+}
+
+.ultimaseccion {
+  align-items: center;
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url(../img/manos-y-pies-haciendo-cargadas.jpg);
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.95);
+}
+.ultimaseccion h3,
+.ultimaseccion p {
+  color: white !important;
+}
+.ultimaseccion a {
+  color: #E0E0E0;
+  background-color: #1E2A44;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  border: 1px solid #3A8DFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.8s;
+}
+.ultimaseccion a:hover {
+  background-color: #3A8DFF !important;
+  color: white !important;
+  box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
+  transform: scale(1.1);
+}
+
+.contacto,
+.nosotros,
+.productos {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+.contacto h3,
+.nosotros h3,
+.productos h3 {
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  font-size: 35px;
+}
+.contacto p,
+.nosotros p,
+.productos p {
+  text-align: center;
+  color: white !important;
+}
+.contacto h4,
+.nosotros h4,
+.productos h4 {
+  text-align: center;
+  font-size: 25px !important;
+  color: white;
+  margin: 30px 0 10px !important;
+}
+
+.contacto {
+  background-color: #112240;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.contacto label {
+  font-weight: 700;
+  color: #E0E0E0;
+  align-self: flex-start;
+}
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3A8DFF;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #0A192F;
+  color: white !important;
+}
+.contacto .contacto-lista li {
+  color: white;
+}
+.contacto button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3A8DFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contacto button:hover {
+  background-color: #64ffda;
+  color: #0A192F;
+  box-shadow: 0 0 12px #64ffda;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #112240;
+  color: #E0E0E0;
+  text-align: center;
+}
+footer .footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: transform 0.5s, color 0.3s;
+}
+footer .footer-social a i {
+  font-size: 50px;
+  color: white;
+  transition: transform 0.5s;
+}
+footer .footer-social a:hover i {
+  color: #3A8DFF;
+  transform: scale(1.5);
+}
+footer .footer-contact h4,
+footer .footer-about h4 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0077ff;
+}
+footer h4 a {
+  text-decoration: none;
+}
+footer h4 a:hover {
+  text-decoration: underline;
+}
+footer .footer-contact p,
+footer .footer-about p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .navbar .nav-link {
+    font-size: 16px !important;
+    padding: 0.4rem 0.6rem;
+  }
+  .navbar-brand {
+    font-size: 28px !important;
+  }
+}
+@media (max-width: 1010px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card1,
+  .card2,
+  .card3 {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 520px) {
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-social {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .footer-social a {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-social a i {
+    font-size: 30px;
+  }
+  .footer-contact h4,
+  .footer-about h4 {
+    font-size: 18px;
+  }
+  .footer-contact p,
+  .footer-about p {
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
