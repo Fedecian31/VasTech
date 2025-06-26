@@ -1,9 +1,11 @@
+/*-Hero-*/
+
 .hero {
     color: $color-texto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    height: min(80vh, 800px);
     box-shadow: inset 0px 30px 50px rgba(0, 0, 0, 0.85);
     position: relative;
 }
@@ -60,8 +62,16 @@
     border-radius: 20px;
     z-index: 10;
 
+    h1 {
+        font-size: 3rem !important;
+        color: $color-texto;
+        font-weight: 700 !important;
+        font-family: $font-main !important;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    }
+
     h2 {
-        font-size: 60px !important;
+        font-size: 35px !important;
         font-weight: 700 !important;
         margin: 0;
     }
@@ -74,6 +84,9 @@
         }
     }
 }
+
+
+/*-Cards-*/
 
 .cards {
     display: flex;
@@ -94,64 +107,96 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 16px;
-        margin-bottom: 15px;
-    }
-
-    h2 {
-        color: $color-texto !important;
-        font-size: 20px;
-        font-weight: 800 !important;
-        margin-bottom: 5px;
-    }
-
-    h3 {
-        color: $color-texto !important;
-        font-size: 14px;
-        margin-bottom: 5px;
-    }
-
-    p {
-        color: $color-texto !important;
-        font-size: 14px;
-        opacity: 0.8 !important;
-        margin-bottom: 15px;
-    }
-
-    a {
-        @include boton-principal;
-
-        &:hover {
-            @include boton-hover;
-        }
-    }
-
+    min-height: 480px;
 }
+
+.card-custom img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-content h2 {
+    color: $color-texto !important;
+    font-size: 20px;
+    font-weight: 800 !important;
+    margin-bottom: 15px;
+}
+
+.card-content h3 {
+    color: $color-texto !important;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    color: $color-texto !important;
+    font-size: 14px;
+    opacity: 0.8 !important;
+    margin-bottom: 15px;
+}
+
+.card-custom a {
+    @include boton-principal;
+
+    &:hover {
+        @include boton-hover;
+    }
+}
+
+/*-Ultima Sección-*/
 
 
 .ultimaseccion {
-    align-items: center;
-    margin: 30px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-image: url(../img/manos-y-pies-haciendo-cargadas.jpg);
-    height: 500px;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.95);
+    padding: 60px 20px;
+    background-color: $color-bg;
+    text-align: center;
+    color: $color-texto;
 
-    h3,
-    p {
-        color: $color-texto !important;
+    h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .beneficios {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .beneficio {
+        flex: 1 1 280px;
+        max-width: 320px;
+        background-color: $color-secundario;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+
+        i {
+            font-size: 2.5rem;
+            color: $color-hover;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: $color-hover;
+        }
+
+        p {
+            font-size: 14px;
+            opacity: 0.85;
+        }
     }
 
     a {
@@ -163,9 +208,198 @@
     }
 }
 
-.contacto,
-.nosotros,
+/*-Tienda-*/
+
+.tienda-container {
+    padding: 60px 20px;
+    background-color: $color-bg;
+    color: $color-texto;
+    display: flex;
+    justify-content: center;
+
+    .producto-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1100px;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 16px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .producto-detalle {
+        flex: 1;
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: $color-hover;
+        }
+
+        .descripcion {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .caracteristicas {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+
+            li {
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+        }
+
+        a {
+            @include boton-principal;
+
+            &:hover {
+                @include boton-hover;
+            }
+        }
+    }
+}
+
+/*-Productos-*/
+
 .productos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: $color-texto;
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .producto-detalle {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+
+        img {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .texto-detalle {
+            flex: 1;
+
+            h4 {
+                margin-top: 20px;
+                color: $color-hover;
+            }
+
+            p,
+            ul {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            ul {
+                margin-left: 20px;
+                list-style-type: disc;
+            }
+
+            a {
+                margin-top: 25px;
+                display: inline-block;
+                @include boton-principal;
+
+                &:hover {
+                    @include boton-hover;
+                }
+            }
+        }
+    }
+}
+
+/*-Nosotros-*/
+
+.nosotros {
+    background-color: $color-bg;
+    color: $color-texto !important;
+    padding: 60px 20px;
+
+    .nosotros-contenido {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto 60px;
+
+        .texto {
+            flex: 1;
+
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 16px;
+            }
+        }
+
+        .imagen {
+            flex: 1;
+
+            img {
+                width: 100%;
+                max-width: 500px;
+                border-radius: 20px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    .valores {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        .valor {
+            background-color: $color-secundario;
+            padding: 25px;
+            border-radius: 16px;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+
+            i {
+                font-size: 2.5rem;
+                color: $color-hover;
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            h4 {
+                color: $color-hover;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 15px;
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+
+
+
+.contacto {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;

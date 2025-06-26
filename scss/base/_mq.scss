@@ -1,3 +1,5 @@
+
+/*-Navbar-*/
 @media (max-width: 768px) {
     .navbar-nav {
         flex-wrap: wrap;
@@ -15,6 +17,38 @@
     }
 }
 
+/*-Hero-*/
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .hero-text {
+        position: static;
+        padding: 1rem 1.5rem;
+        border-radius: 15px;
+        gap: 8px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .hero-text h2 {
+        font-size: 1.6rem !important;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+/*-Cards-*/
 
 @media (max-width: 1010px) {
     .cards {
@@ -57,6 +91,43 @@
     }
 }
 
+
+/*-Ultima sección-*/
+
+@media (max-width: 1024px) {
+    .beneficios {
+        justify-content: center;
+    }
+
+    .beneficio {
+        flex: 1 1 45%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .beneficio {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/*-Producto-*/
+
+
+@media (max-width: 768px) {
+    .producto-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .producto-detalle {
+        align-items: center;
+    }
+}
+
+/*-Footer-*/
 
 @media (max-width: 520px) {
     footer {
