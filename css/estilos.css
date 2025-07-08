@@ -634,6 +634,14 @@ footer .footer-about p {
     height: auto;
     padding: 3rem 1rem;
   }
+  #Inicio,
+  #contacto,
+  #nosotros,
+  #productos,
+  #tienda {
+    background-attachment: scroll;
+    background-position: top center;
+  }
   .hero-text {
     position: static;
     padding: 1rem 1.5rem;

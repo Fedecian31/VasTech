@@ -1,4 +1,3 @@
-
 /*-Navbar-*/
 @media (max-width: 768px) {
     .navbar-nav {
@@ -24,6 +23,17 @@
         height: auto;
         padding: 3rem 1rem;
     }
+
+
+    #Inicio,
+    #contacto,
+    #nosotros,
+    #productos,
+    #tienda {
+        background-attachment: scroll;
+        background-position: top center;
+    }
+
 
     .hero-text {
         position: static;
@@ -78,9 +88,9 @@
 
 @media (max-width: 440px) {
     .card-custom {
-        margin-top: 80px; 
-        min-height: auto;  
-        padding: 30px 20px; 
+        margin-top: 80px;
+        min-height: auto;
+        padding: 30px 20px;
     }
 
     .card-custom img {
@@ -165,28 +175,28 @@
 
 /*-Nosotros-*/
 
- @media (max-width: 768px) {
-        .nosotros-contenido {
-            flex-direction: column;
+@media (max-width: 768px) {
+    .nosotros-contenido {
+        flex-direction: column;
 
-            .texto {
-                text-align: center;
+        .texto {
+            text-align: center;
 
-                h3 {
-                    font-size: 26px;
-                }
-
-                p {
-                    font-size: 16px;
-                }
+            h3 {
+                font-size: 26px;
             }
 
-            .imagen {
-                margin-top: 30px;
+            p {
+                font-size: 16px;
+            }
+        }
 
-                img {
-                    max-width: 320px;
-                }
+        .imagen {
+            margin-top: 30px;
+
+            img {
+                max-width: 320px;
             }
         }
     }
+}
