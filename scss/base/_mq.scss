@@ -132,13 +132,23 @@
 
 
 @media (max-width: 768px) {
-    .producto-info {
+    .producto .producto-detalle {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .producto-detalle {
         align-items: center;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+        }
+
+        .texto-detalle {
+            margin-top: 20px;
+
+            ul {
+                margin-left: 0;
+                padding-left: 20px;
+            }
+        }
     }
 }
 
