@@ -164,7 +164,8 @@ body {
 }
 
 .card-custom {
-  width: 300px;
+  width: 100%;
+  max-width: 350px;
   background-color: #112240;
   border-radius: 20px;
   padding: 20px;
@@ -417,34 +418,44 @@ body {
 .nosotros {
   background-color: #0A192F;
   color: white !important;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 .nosotros .nosotros-contenido {
-  text-align: center;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 60px;
   max-width: 1200px;
-  margin: 0 auto 60px;
+  margin: 0 auto 80px;
 }
 .nosotros .nosotros-contenido .texto {
-  flex: 1;
+  flex: 1 1 400px;
+  text-align: left;
+}
+.nosotros .nosotros-contenido .texto h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
 }
 .nosotros .nosotros-contenido .texto p {
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: white;
 }
 .nosotros .nosotros-contenido .imagen {
-  flex: 1;
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
 }
 .nosotros .nosotros-contenido .imagen img {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  height: auto;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
 }
 .nosotros .valores {
   display: flex;
@@ -643,32 +654,33 @@ footer .footer-about p {
   }
 }
 /*-Cards-*/
-@media (max-width: 1010px) {
+@media (max-width: 768px) {
   .cards {
     flex-direction: column;
     align-items: center;
   }
   .card-custom {
-    flex-direction: column;
-    text-align: center;
-    padding: 60px 50px;
+    padding: 40px 20px;
     margin-bottom: 20px;
   }
   .card-custom img {
-    margin: -100px 0 30px 0;
-    width: 100%;
-    height: 250px;
+    margin: 0 0 20px 0;
+    height: 220px;
   }
   .card-custom h2 {
-    margin-right: 0;
-    font-size: 26px;
+    font-size: 22px;
   }
   .card-custom p {
-    max-width: 360px;
+    max-width: 100%;
     margin: 0 auto 20px auto;
   }
 }
 @media (max-width: 440px) {
+  .card-custom {
+    margin-top: 80px;
+    min-height: auto;
+    padding: 30px 20px;
+  }
   .card-custom img {
     height: 50vw;
     width: 50vw;
@@ -730,6 +742,27 @@ footer .footer-about p {
   .footer-contact p,
   .footer-about p {
     font-size: 13px;
+  }
+}
+/*-Nosotros-*/
+@media (max-width: 768px) {
+  .nosotros-contenido {
+    flex-direction: column;
+  }
+  .nosotros-contenido .texto {
+    text-align: center;
+  }
+  .nosotros-contenido .texto h3 {
+    font-size: 26px;
+  }
+  .nosotros-contenido .texto p {
+    font-size: 16px;
+  }
+  .nosotros-contenido .imagen {
+    margin-top: 30px;
+  }
+  .nosotros-contenido .imagen img {
+    max-width: 320px;
   }
 }
 

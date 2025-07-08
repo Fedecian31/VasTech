@@ -98,8 +98,9 @@
 }
 
 .card-custom {
-    width: 300px;
-    background-color: #112240;
+    width: 100%;
+    max-width: 350px;
+    background-color: $color-secundario;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.85);
@@ -336,36 +337,47 @@
 .nosotros {
     background-color: $color-bg;
     color: $color-texto !important;
-    padding: 60px 20px;
+    padding: 80px 20px;
 
     .nosotros-contenido {
-        text-align: center;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 40px;
+        justify-content: space-between;
+        gap: 60px;
         max-width: 1200px;
-        margin: 0 auto 60px;
+        margin: 0 auto 80px;
 
         .texto {
-            flex: 1;
+            flex: 1 1 400px;
+            text-align: left;
+
+            h3 {
+                font-size: 32px;
+                margin-bottom: 20px;
+                color: $color-texto;
+            }
 
             p {
-                text-align: center;
-                font-size: 16px;
-                line-height: 1.6;
-                margin-bottom: 16px;
+                font-size: 17px;
+                line-height: 1.7;
+                margin-bottom: 18px;
+                color: lighten($color-texto, 10%);
             }
         }
 
         .imagen {
-            flex: 1;
+            flex: 1 1 400px;
+            display: flex;
+            justify-content: center;
 
             img {
                 width: 100%;
-                max-width: 400px;
+                max-width: 420px;
+                height: auto;
                 border-radius: 20px;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+                object-fit: cover;
             }
         }
     }
