@@ -25,15 +25,6 @@
     }
 
 
-    #Inicio,
-    #contacto,
-    #nosotros,
-    #productos,
-    #tienda {
-        background-attachment: scroll;
-        background-position: top center;
-    }
-
 
     .hero-text {
         position: static;
@@ -55,6 +46,18 @@
         font-size: 1rem;
         line-height: 1.4;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #Inicio,
+    #contacto,
+    #nosotros,
+    #productos,
+    #tienda {
+        background-attachment: scroll;
+        background-position: top center;
     }
 }
 

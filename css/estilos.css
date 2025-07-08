@@ -351,49 +351,49 @@ body {
 }
 
 /*-Productos-*/
-.productos {
+.producto {
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
   color: white;
 }
-.productos h2 {
+.producto h2 {
   text-align: center;
   font-weight: 600 !important;
 }
-.productos h3 {
+.producto h3 {
   font-size: 28px;
   margin-bottom: 30px;
   text-align: center;
 }
-.productos .producto-detalle {
+.producto .producto-detalle {
   display: flex;
   gap: 40px;
   align-items: flex-start;
 }
-.productos .producto-detalle img {
+.producto .producto-detalle img {
   max-width: 400px;
   width: 100%;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
-.productos .producto-detalle .texto-detalle {
+.producto .producto-detalle .texto-detalle {
   flex: 1;
 }
-.productos .producto-detalle .texto-detalle h4 {
+.producto .producto-detalle .texto-detalle h4 {
   margin-top: 20px;
   color: #64ffda;
 }
-.productos .producto-detalle .texto-detalle p,
-.productos .producto-detalle .texto-detalle ul {
+.producto .producto-detalle .texto-detalle p,
+.producto .producto-detalle .texto-detalle ul {
   font-size: 16px;
   line-height: 1.5;
 }
-.productos .producto-detalle .texto-detalle ul {
+.producto .producto-detalle .texto-detalle ul {
   margin-left: 20px;
   list-style-type: disc;
 }
-.productos .producto-detalle .texto-detalle a {
+.producto .producto-detalle .texto-detalle a {
   margin-top: 25px;
   display: inline-block;
   color: #E0E0E0;
@@ -407,7 +407,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   transition: 0.8s;
 }
-.productos .producto-detalle .texto-detalle a:hover {
+.producto .producto-detalle .texto-detalle a:hover {
   background-color: #3A8DFF !important;
   color: white !important;
   box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
@@ -634,14 +634,6 @@ footer .footer-about p {
     height: auto;
     padding: 3rem 1rem;
   }
-  #Inicio,
-  #contacto,
-  #nosotros,
-  #productos,
-  #tienda {
-    background-attachment: scroll;
-    background-position: top center;
-  }
   .hero-text {
     position: static;
     padding: 1rem 1.5rem;
@@ -659,6 +651,16 @@ footer .footer-about p {
     font-size: 1rem;
     line-height: 1.4;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  #Inicio,
+  #contacto,
+  #nosotros,
+  #productos,
+  #tienda {
+    background-attachment: scroll;
+    background-position: top center;
   }
 }
 /*-Cards-*/
