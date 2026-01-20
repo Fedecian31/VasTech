@@ -29,7 +29,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-TYTLMSGP8J');
 </script>
 
@@ -40,10 +39,10 @@
         <nav class="navbar navbar-expand-lg">
             <nav class="navbar">
                 <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
-                    <a class="navbar-brand" href="../index.html"><span>V</span>as<span>T</span>ech</a>
+                    <a class="navbar-brand" href="./index.html"><span>V</span>as<span>T</span>ech</a>
                     <div class="navbar-nav d-flex flex-row flex-wrap gap-3">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                        <a class="nav-link" href="./tienda.html">Tienda</a>
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                        <!-- <a class="nav-link" href="./tienda.html">Tienda</a> -->
                         <a class="nav-link" href="./productos.html">Productos</a>
                         <a class="nav-link" href="./nosotros.html">Nosotros</a>
                         <a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a>
@@ -57,29 +56,63 @@
         <div class="hero" id="contacto">
             <div class="hero-text">
                 <h1 class="animate__animated animate__jackInTheBox">Contactanos</h1>
-                <p>¿Tenés una duda o querés trabajar con nosotros? Escribinos.
-                </p>
+                <p>¿Tenés una duda o querés trabajar con nosotros? Escribinos.</p>
                 <a href="/pages/productos.html">Productos</a>
             </div>
         </div>
     </section>
 
-
     <section class="contacto">
         <h2>Contacto</h2>
-        <p>¿Querés más información sobre Mosquito? ¿Tenés dudas o querés pedir una demo? ¡Escribinos!</p>
+        <p>¿Querés más información? ¿Tenés dudas o querés pedir una demo? ¡Escribinos!</p>
 
-        <form action="procesar_formulario.php" method="POST" class="contacto-form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <form id="contactoForm" action="procesar_formulario.php" method="POST" class="contacto-form" novalidate>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="nombre_apellido">Nombre y apellido:</label>
+            <input type="text" id="nombre_apellido" name="nombre_apellido" required maxlength="100">
+            <div id="nombre_apellidoError" class="error-text">Ingresá tu nombre y apellido (mínimo 3 caracteres).</div>
+
+            <label for="mail">Mail:</label>
+            <input type="email" id="mail" name="mail" required maxlength="120">
+            <div id="mailError" class="error-text">Mail inválido. Debe tener “@” y un dominio válido.</div>
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required maxlength="60">
+            <div id="paisError" class="error-text">Ingresá un país válido.</div>
+
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" required maxlength="60">
+            <div id="provinciaError" class="error-text">Ingresá una provincia válida.</div>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required maxlength="60">
+            <div id="ciudadError" class="error-text">Ingresá una ciudad válida.</div>
+
+            <label for="institucion">Institución:</label>
+            <input type="text" id="institucion" name="institucion" required maxlength="120">
+            <div id="institucionError" class="error-text">Ingresá el nombre de la institución.</div>
+
+            <label for="producto">Información sobre el producto:</label>
+            <select id="producto" name="producto" required>
+                <option value="" selected disabled>Seleccioná una opción</option>
+                <option value="mosquito_basquet">Mosquito Basket</option>
+                <option value="mosquito_gym">Mosquito Gym</option>
+                <option value="bosco">Bosco</option>
+                <option value="combo">Combo</option>
+            </select>
+            <div id="productoError" class="error-text">Elegí una opción del desplegable.</div>
 
             <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <textarea id="mensaje" name="mensaje" rows="5" required maxlength="3000"></textarea>
+            <div id="mensajeError" class="error-text">Escribí un mensaje válido (mínimo 10 caracteres).</div>
+
+            <!-- Honeypot anti-bots -->
+            <input type="text" name="empresa" autocomplete="off" tabindex="-1"
+                style="position:absolute; left:-9999px; height:0; width:0; opacity:0;">
 
             <button type="submit">Enviar</button>
+
+            <p id="form-status" class="form-status" style="margin-top:10px;"></p>
         </form>
 
         <hr>
@@ -91,7 +124,6 @@
             <li>Instagram: <a href="https://www.instagram.com/vastech.ar" target="_blank">@vastech.ar</a></li>
         </ul>
     </section>
-
 
     <!--Pie de Pagina-->
     <footer>
@@ -113,6 +145,7 @@
             <p>En VasTech buscamos ayudarte a mejorar tu rendimiento con la mejor tecnología y asesoramiento.</p>
         </div>
     </footer>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
@@ -120,5 +153,8 @@
     crossorigin="anonymous"></script>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- JS del contacto en la MISMA carpeta /pages para evitar quilombos de rutas -->
+<script src="./contacto.js"></script>
 
 </html>

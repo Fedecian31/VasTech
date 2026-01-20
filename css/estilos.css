@@ -117,23 +117,50 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.034);
-  gap: 10px;
-  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.22);
+  gap: 12px;
+  padding: 18px 22px;
   border-radius: 20px;
   z-index: 10;
+  max-width: 900px;
+  border: 1px solid rgba(224, 224, 224, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.hero-text .hero-link {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  box-shadow: none;
+  font-weight: 700;
+}
+.hero-text .hero-link:hover {
+  background: transparent;
+  box-shadow: none;
+  transform: none;
 }
 .hero-text h1 {
-  font-size: 3rem !important;
+  font-size: clamp(2.1rem, 4vw, 3rem) !important;
   color: white;
   font-weight: 700 !important;
   font-family: "Lato", sans-serif !important;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  line-height: 1.08;
+  margin-bottom: 4px;
 }
 .hero-text h2 {
-  font-size: 35px !important;
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem) !important;
   font-weight: 700 !important;
   margin: 0;
+  line-height: 1.25;
+  opacity: 0.95;
+}
+.hero-text p {
+  max-width: 48ch;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 800;
+  opacity: 0.95;
+  margin: 4px 0 0;
 }
 .hero-text a {
   color: #E0E0E0;
@@ -152,6 +179,14 @@ body {
   color: white !important;
   box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
   transform: scale(1.1);
+}
+.hero-text .hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #64ffda;
+  opacity: 0.95;
 }
 
 /*-Cards-*/
@@ -370,19 +405,45 @@ body {
   display: flex;
   gap: 40px;
   align-items: flex-start;
+  margin-bottom: 80px;
+  /* ===== Carrusel (fijo para evitar “salto” del texto) ===== */
 }
-.producto .producto-detalle img {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 16px;
+.producto .producto-detalle .producto-carousel {
+  flex: 0 0 420px; /* ✅ ancho fijo => no reflow */
+  width: 420px;
+  max-width: 100%;
+  border-radius: 18px;
+  padding: 16px;
+  background-color: #f0f0f0;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.producto .producto-detalle .producto-carousel .carousel-inner {
+  width: 100%;
+  aspect-ratio: 1/1; /* ✅ alto fijo real */
+}
+.producto .producto-detalle .producto-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.producto .producto-detalle {
+  /* flechitas del carrusel con un poco de contraste */
+}
+.producto .producto-detalle .carousel-control-prev-icon,
+.producto .producto-detalle .carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 0.85;
 }
 .producto .producto-detalle .texto-detalle {
   flex: 1;
+  min-width: 0; /* ✅ evita saltitos cuando se anima el carrusel */
 }
 .producto .producto-detalle .texto-detalle h4 {
   margin-top: 20px;
   color: #64ffda;
+  font-weight: 800;
 }
 .producto .producto-detalle .texto-detalle p,
 .producto .producto-detalle .texto-detalle ul {
@@ -392,6 +453,9 @@ body {
 .producto .producto-detalle .texto-detalle ul {
   margin-left: 20px;
   list-style-type: disc;
+}
+.producto .producto-detalle .texto-detalle {
+  /* CTA principal */
 }
 .producto .producto-detalle .texto-detalle a {
   margin-top: 25px;
@@ -412,6 +476,58 @@ body {
   color: white !important;
   box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
   transform: scale(1.1);
+}
+.producto {
+  /* Acciones: botón + link (prolijo, sin links azules feos) */
+}
+.producto .producto-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.producto .link-secundario {
+  display: inline-block;
+  margin-top: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  color: white;
+  opacity: 0.9;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.producto .link-secundario:hover {
+  opacity: 1;
+}
+.producto {
+  /* Estilo “pro” (si usás la clase en los 3, quedan iguales y elegantes) */
+}
+.producto .producto-detalle--pro {
+  padding: 26px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(58, 141, 255, 0.12), rgba(0, 0, 0, 0));
+  border: 1px solid rgba(58, 141, 255, 0.35);
+}
+.producto .producto-detalle--pro .texto-detalle h3 {
+  position: relative;
+  padding-left: 86px;
+}
+.producto .producto-detalle--pro .texto-detalle h3::before {
+  content: "MOSQUITO";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(58, 141, 255, 0.22);
+  border: 1px solid rgba(58, 141, 255, 0.45);
 }
 
 /*-Nosotros-*/
@@ -527,9 +643,10 @@ body {
   font-weight: 700;
   color: #E0E0E0;
   align-self: flex-start;
+  margin: 20px;
 }
 .contacto input,
-.contacto textarea {
+.contacto textarea, .contacto select {
   width: 100%;
   padding: 10px;
   border: 1px solid #3A8DFF;
@@ -557,6 +674,23 @@ body {
   background-color: #64ffda;
   color: #0A192F;
   box-shadow: 0 0 12px #64ffda;
+}
+
+.error-text {
+  display: none;
+  color: #d93025;
+  font-size: 0.95rem;
+  margin: 6px 0 10px;
+}
+
+.input-error {
+  border: 2px solid #d93025 !important;
+  outline: none;
+}
+
+.input-ok {
+  border: 2px solid #188038 !important;
+  outline: none;
 }
 
 footer {
@@ -632,13 +766,21 @@ footer .footer-about p {
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    padding: 3rem 1rem;
+    padding: 80px 0;
   }
   .hero-text {
     position: static;
-    padding: 1rem 1.5rem;
+    padding: 16px 16px;
     border-radius: 15px;
     gap: 8px;
+    margin: 0 14px;
+  }
+  .hero-text a {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-text .hero-link {
+    width: auto;
   }
   .hero-text h1 {
     font-size: 2.2rem !important;
@@ -651,6 +793,10 @@ footer .footer-about p {
     font-size: 1rem;
     line-height: 1.4;
     text-align: center;
+  }
+  .hero-text .hero-actions a {
+    width: 100%;
+    justify-content: center;
   }
 }
 @media (max-width: 768px) {
@@ -723,9 +869,11 @@ footer .footer-about p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 24px;
+    margin-bottom: 60px;
   }
   .producto .producto-detalle img {
-    max-width: 100%;
+    max-width: 280px;
   }
   .producto .producto-detalle .texto-detalle {
     margin-top: 20px;
@@ -733,6 +881,12 @@ footer .footer-about p {
   .producto .producto-detalle .texto-detalle ul {
     margin-left: 0;
     padding-left: 20px;
+  }
+  .comparativa {
+    padding-bottom: 55px;
+  }
+  .cta-intermedio {
+    padding-bottom: 65px;
   }
 }
 /*-Footer-*/
