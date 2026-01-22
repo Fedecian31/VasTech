@@ -410,23 +410,24 @@ body {
 }
 .producto .producto-detalle .producto-carousel {
   flex: 0 0 420px; /* ✅ ancho fijo => no reflow */
-  width: 420px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 420px;
   border-radius: 18px;
   padding: 16px;
-  background-color: #f0f0f0;
+  background-color: #1E2A44;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
 .producto .producto-detalle .producto-carousel .carousel-inner {
   width: 100%;
-  aspect-ratio: 1/1; /* ✅ alto fijo real */
 }
 .producto .producto-detalle .producto-carousel img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
+  max-height: 420px;
   border-radius: 12px;
+  border-color: #1E2A44 !important;
 }
 .producto .producto-detalle {
   /* flechitas del carrusel con un poco de contraste */
@@ -547,11 +548,12 @@ body {
 }
 .nosotros .nosotros-contenido .texto {
   flex: 1 1 400px;
-  text-align: left;
+  text-align: center;
 }
 .nosotros .nosotros-contenido .texto h3 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 52px;
+  font-weight: bolder;
+  margin-bottom: 50px;
   color: white;
 }
 .nosotros .nosotros-contenido .texto p {
@@ -568,8 +570,9 @@ body {
 .nosotros .nosotros-contenido .imagen img {
   width: 100%;
   max-width: 420px;
-  height: auto;
+  height: fit-content;
   border-radius: 20px;
+  border-color: #1E2A44;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   object-fit: cover;
 }
@@ -661,6 +664,7 @@ body {
 .contacto button {
   width: 100%;
   padding: 10px;
+  margin-top: 20px;
   background-color: #3A8DFF;
   color: white;
   border: none;
