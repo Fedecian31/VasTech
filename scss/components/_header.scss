@@ -3,6 +3,46 @@
     padding: 1rem 2rem;
 }
 
+/* === Marca en el header === */
+.navbar .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brand__logo {
+    height: 45px;
+    /* tamaño ideal para navbar */
+    width: auto;
+    display: block;
+}
+
+.brand__text {
+    font-weight: 800;
+    letter-spacing: .2px;
+}
+
+/* Si querés que el texto no se vea (pero quede para SEO/accesibilidad) */
+.brand__text {
+    position: absolute;
+    left: -9999px;
+}
+
+/* ===== Logo VasTech en navbar ===== */
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+
+
 .container-fluid {
     display: flex;
     justify-content: space-between;

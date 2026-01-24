@@ -16,6 +16,44 @@ body {
   padding: 1rem 2rem;
 }
 
+/* === Marca en el header === */
+.navbar .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand__logo {
+  height: 45px;
+  /* tamaño ideal para navbar */
+  width: auto;
+  display: block;
+}
+
+.brand__text {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+/* Si querés que el texto no se vea (pero quede para SEO/accesibilidad) */
+.brand__text {
+  position: absolute;
+  left: -9999px;
+}
+
+/* ===== Logo VasTech en navbar ===== */
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
 .container-fluid {
   display: flex;
   justify-content: space-between;
@@ -73,7 +111,7 @@ body {
 }
 
 #Inicio {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hombre-recibiendo-cargada.webp);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/jugador-lanzando-inicio.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -81,7 +119,7 @@ body {
 }
 
 #contacto {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/recibiendo-arranque.webp);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/cargada-sin-correccion-hero.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -396,20 +434,15 @@ body {
   text-align: center;
   font-weight: 600 !important;
 }
-.producto h3 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  text-align: center;
-}
 .producto .producto-detalle {
   display: flex;
   gap: 40px;
   align-items: flex-start;
   margin-bottom: 80px;
-  /* ===== Carrusel (fijo para evitar “salto” del texto) ===== */
+  /* ===== Carrusel ===== */
 }
 .producto .producto-detalle .producto-carousel {
-  flex: 0 0 420px; /* ✅ ancho fijo => no reflow */
+  flex: 0 0 420px;
   width: 100%;
   max-width: 420px;
   border-radius: 18px;
@@ -429,9 +462,6 @@ body {
   border-radius: 12px;
   border-color: #1E2A44 !important;
 }
-.producto .producto-detalle {
-  /* flechitas del carrusel con un poco de contraste */
-}
 .producto .producto-detalle .carousel-control-prev-icon,
 .producto .producto-detalle .carousel-control-next-icon {
   filter: invert(1);
@@ -439,7 +469,38 @@ body {
 }
 .producto .producto-detalle .texto-detalle {
   flex: 1;
-  min-width: 0; /* ✅ evita saltitos cuando se anima el carrusel */
+  min-width: 0;
+  /* ===== CABECERA DEL PRODUCTO ===== */
+}
+.producto .producto-detalle .texto-detalle .product-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.producto .producto-detalle .texto-detalle {
+  /* Logo inline (altura de texto) */
+}
+.producto .producto-detalle .texto-detalle .product-logo-inline {
+  height: 40px;
+  width: auto;
+  opacity: 0.9;
+  transform: translateY(10px);
+}
+.producto .producto-detalle .texto-detalle {
+  /* H3 con estilo ovalado (reemplaza al before) */
+}
+.producto .producto-detalle .texto-detalle h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(58, 141, 255, 0.22);
+  border: 1px solid rgba(58, 141, 255, 0.45);
+  display: inline-block;
 }
 .producto .producto-detalle .texto-detalle h4 {
   margin-top: 20px;
@@ -454,9 +515,6 @@ body {
 .producto .producto-detalle .texto-detalle ul {
   margin-left: 20px;
   list-style-type: disc;
-}
-.producto .producto-detalle .texto-detalle {
-  /* CTA principal */
 }
 .producto .producto-detalle .texto-detalle a {
   margin-top: 25px;
@@ -478,9 +536,6 @@ body {
   box-shadow: 0 6px 16px rgba(58, 141, 255, 0.6) !important;
   transform: scale(1.1);
 }
-.producto {
-  /* Acciones: botón + link (prolijo, sin links azules feos) */
-}
 .producto .producto-actions {
   margin-top: 18px;
   display: flex;
@@ -489,8 +544,6 @@ body {
   flex-wrap: wrap;
 }
 .producto .link-secundario {
-  display: inline-block;
-  margin-top: 0;
   background: transparent;
   border: none;
   padding: 0;
@@ -503,32 +556,11 @@ body {
 .producto .link-secundario:hover {
   opacity: 1;
 }
-.producto {
-  /* Estilo “pro” (si usás la clase en los 3, quedan iguales y elegantes) */
-}
 .producto .producto-detalle--pro {
   padding: 26px;
   border-radius: 22px;
   background: linear-gradient(180deg, rgba(58, 141, 255, 0.12), rgba(0, 0, 0, 0));
   border: 1px solid rgba(58, 141, 255, 0.35);
-}
-.producto .producto-detalle--pro .texto-detalle h3 {
-  position: relative;
-  padding-left: 86px;
-}
-.producto .producto-detalle--pro .texto-detalle h3::before {
-  content: "MOSQUITO";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.6px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(58, 141, 255, 0.22);
-  border: 1px solid rgba(58, 141, 255, 0.45);
 }
 
 /*-Nosotros-*/
@@ -649,7 +681,8 @@ body {
   margin: 20px;
 }
 .contacto input,
-.contacto textarea, .contacto select {
+.contacto textarea,
+.contacto select {
   width: 100%;
   padding: 10px;
   border: 1px solid #3A8DFF;
@@ -697,14 +730,56 @@ body {
   outline: none;
 }
 
+/* ===== Contacto: logo + título dentro del cuadro ===== */
+.contacto .contacto-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 5px;
+}
+.contacto .contacto-logo {
+  height: 45px;
+  width: auto;
+  opacity: 0.9;
+  transform: translateY(10px);
+}
+.contacto .contacto-header h2 {
+  text-align: left;
+  margin: 0;
+}
+
+/*-Footer-*/
 footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   padding: 40px 20px;
   background-color: #112240;
   color: #E0E0E0;
   text-align: center;
+  align-items: center;
+  /* ===== Marca ===== */
+}
+footer .footer-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-brand a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+footer .footer-brand .footer-logo {
+  height: 100px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
+}
+footer {
+  /* ===== Redes ===== */
 }
 footer .footer-social {
   display: flex;
@@ -729,7 +804,7 @@ footer .footer-social a i {
 }
 footer .footer-social a:hover i {
   color: #3A8DFF;
-  transform: scale(1.5);
+  transform: scale(1.35);
 }
 footer .footer-contact h4,
 footer .footer-about h4 {
@@ -751,6 +826,35 @@ footer .footer-about p {
   color: #ccc;
 }
 
+/* Responsive */
+@media (max-width: 520px) {
+  footer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  footer .footer-social {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  footer .footer-social a {
+    width: 40px;
+    height: 40px;
+  }
+  footer .footer-social a i {
+    font-size: 30px;
+  }
+  footer .footer-brand .footer-logo {
+    height: 48px;
+  }
+  footer .footer-contact h4,
+  footer .footer-about h4 {
+    font-size: 18px;
+  }
+  footer .footer-contact p,
+  footer .footer-about p {
+    font-size: 13px;
+  }
+}
 /*-Navbar-*/
 @media (max-width: 768px) {
   .navbar-nav {
@@ -764,6 +868,11 @@ footer .footer-about p {
   }
   .navbar-brand {
     font-size: 28px !important;
+  }
+}
+@media (max-width: 768px) {
+  .brand-logo {
+    height: 34px;
   }
 }
 /*-Hero-*/
@@ -875,16 +984,37 @@ footer .footer-about p {
     text-align: center;
     gap: 24px;
     margin-bottom: 60px;
+    /* el carrusel ya tiene max-width, pero ajustamos el alto de imagen en mobile */
   }
-  .producto .producto-detalle img {
+  .producto .producto-detalle .producto-carousel {
+    max-width: 320px;
+  }
+  .producto .producto-detalle .producto-carousel img {
     max-width: 280px;
+    margin: 0 auto;
+    display: block;
   }
   .producto .producto-detalle .texto-detalle {
     margin-top: 20px;
+    /* ✅ cabecera: logo + h3 centrados */
+  }
+  .producto .producto-detalle .texto-detalle .product-header {
+    justify-content: center;
+  }
+  .producto .producto-detalle .texto-detalle .product-logo-inline {
+    transform: translateY(1px);
+  }
+  .producto .producto-detalle .texto-detalle {
+    /* ✅ h3 ovalado: centrado y sin ocupar 100% */
+  }
+  .producto .producto-detalle .texto-detalle h3 {
+    text-align: center;
   }
   .producto .producto-detalle .texto-detalle ul {
     margin-left: 0;
     padding-left: 20px;
+    text-align: left;
+    /* para que las viñetas se lean bien */
   }
   .comparativa {
     padding-bottom: 55px;

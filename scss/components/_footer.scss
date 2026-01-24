@@ -1,12 +1,37 @@
+/*-Footer-*/
+
 footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr); // ✅ ahora hay 4 bloques
     gap: 40px;
     padding: 40px 20px;
-    background-color: $color-secundario;
+    background-color: #112240;
     color: #E0E0E0;
     text-align: center;
+    align-items: center;
 
+    /* ===== Marca ===== */
+    .footer-brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .footer-logo {
+            height: 100px;
+            width: auto;
+            display: block;
+            opacity: 0.95;
+        }
+    }
+
+    /* ===== Redes ===== */
     .footer-social {
         display: flex;
         justify-content: center;
@@ -30,8 +55,8 @@ footer {
             }
 
             &:hover i {
-                color: $color-primario;
-                transform: scale(1.5);
+                color: #3A8DFF;
+                transform: scale(1.35);
             }
         }
     }
@@ -57,5 +82,41 @@ footer {
         margin: 5px 0;
         font-size: 14px;
         color: #ccc;
+    }
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    footer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        .footer-social {
+            flex-wrap: wrap;
+            gap: 15px;
+
+            a {
+                width: 40px;
+                height: 40px;
+
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .footer-brand .footer-logo {
+            height: 48px;
+        }
+
+        .footer-contact h4,
+        .footer-about h4 {
+            font-size: 18px;
+        }
+
+        .footer-contact p,
+        .footer-about p {
+            font-size: 13px;
+        }
     }
 }

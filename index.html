@@ -52,7 +52,10 @@
         <nav class="navbar navbar-expand-lg">
             <nav class="navbar">
                 <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
-                    <a class="navbar-brand" href="/index.html"><span>V</span>as<span>T</span>ech</a>
+                    <a class="navbar-brand brand" href="/index.html" aria-label="VasTech">
+                        <img src="./img/logo-vastech.png" alt="VasTech" class="brand__logo">
+                        <span class="brand__text">VasTech</span>
+                    </a>
                     <div class="navbar-nav d-flex flex-row flex-wrap gap-3">
                         <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         <!-- <a class="nav-link" href="./pages/tienda.html">Tienda</a> -->
@@ -70,28 +73,24 @@
 
         <!--Hero-->
         <section>
-  <div class="hero" id="Inicio">
-    <div class="hero-text hero-text--impact">
-      <h1 class="animate__animated animate__jackInTheBox">VasTech</h1>
-<h2>Entrená con precisión</h2>
+            <div class="hero" id="Inicio">
+                <div class="hero-text hero-text--impact">
+                    <h1 class="animate__animated animate__jackInTheBox">VasTech</h1>
+                    <h2>Entrená con precisión</h2>
 
-<p class="hero-tagline">
-  Dejá de corregir a ciegas. Convertí correcciones en progreso medible.
-</p>
+                    <p class="hero-tagline">
+                        Dejá de corregir a ciegas. Convertí correcciones en progreso medible.
+                    </p>
 
-<a
-  href="./pages/contacto.html"
-  target="_blank"
-  rel="noopener"
->
-  Consultas
-</a>
+                    <a href="./pages/contacto.html" target="_blank" rel="noopener">
+                        Consultas
+                    </a>
 
-<a class="hero-link" href="./pages/productos.html">Ver más</a>
-      </div>
-    </div>
-  </div>
-</section>
+                    <a class="hero-link" href="./pages/productos.html">Ver más</a>
+                </div>
+            </div>
+            </div>
+        </section>
 
         <!--Cards-->
         <!-- <section class="cards" data-aos="fade-up" data-aos-duration="1500">
@@ -159,16 +158,28 @@
 
         <!--Pie de Pagina-->
         <footer>
+            <!-- Marca -->
+            <div class="footer-brand">
+                <a href="/index.html" aria-label="VasTech">
+                    <img src="/img/logo-vastech.png" alt="VasTech" class="footer-logo">
+                </a>
+            </div>
+
             <div class="footer-social">
-
-
-
                 <!-- <a href="#" target="_blank"><i class="bi bi-facebook"></i></a> -->
-                <a href="https://www.instagram.com/vastech.ar/" target="_blank"><i class="bi bi-instagram"></i></a>
-                <!-- <a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a> -->
-                <a href="https://wa.me/5493482374489" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.instagram.com/vastech.ar/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
 
-                <a href="https://www.youtube.com/@VasTech_arg" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <!-- <a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a> -->
+
+                <a href="https://wa.me/5493482374489" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@VasTech_arg" target="_blank" rel="noopener" aria-label="YouTube">
+                    <i class="bi bi-youtube"></i>
+                </a>
             </div>
 
             <div class="footer-contact">
@@ -184,6 +195,7 @@
                 <p>En VasTech buscamos ayudarte a mejorar tu rendimiento con la mejor tecnología y asesoramiento.</p>
             </div>
         </footer>
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
