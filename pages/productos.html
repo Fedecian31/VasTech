@@ -39,40 +39,70 @@
 
   <!-- Header -->
   <header>
-    <nav class="navbar navbar-expand-lg">
-      <nav class="navbar">
-        <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
 
-          <!-- LOGO EN NAVBAR -->
-          <a class="navbar-brand brand" href="../index.html" aria-label="VasTech">
-            <img src="../img/logo-vastech.png" alt="VasTech" class="brand-logo" />
-          </a>
+        <!-- Logo -->
+        <a class="navbar-brand brand" href="../index.html" aria-label="VasTech">
+          <img src="../img/logo-vastech.png" alt="VasTech" class="brand__logo brand__logo--desktop">
+          <span class="brand__mobile">
+            <img src="../img/aguila.png" alt="VasTech" class="brand__eagle">
+            <img src="../img/vastech.png" alt="VasTech" class="brand__word">
+          </span>
+        </a>
 
-          <div class="navbar-nav d-flex flex-row flex-wrap gap-3">
-            <a class="nav-link" href="../index.html">Inicio</a>
-            <a class="nav-link active" aria-current="page" href="./productos.html">Productos</a>
-            <a class="nav-link" href="./nosotros.html">Nosotros</a>
-            <a class="nav-link" href="./contacto.html">Consultas</a>
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+          aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="navMenu">
+
+          <!-- LINKS: izquierda -->
+          <div class="navbar-nav me-auto">
+            <a class="nav-link" href="../index.html" data-i18n="nav.inicio">Inicio</a>
+            <a class="nav-link" href="./productos.html" data-i18n="nav.productos">Productos</a>
+            <a class="nav-link" href="./nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+            <a class="nav-link" href="./contacto.html" data-i18n="nav.consultas">Consultas</a>
+          </div>
+
+          <!-- IDIOMA: derecha -->
+          <div class="dropdown lang-dropdown ms-md-3 mt-3 mt-md-0">
+            <button class="btn btn-lang dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+              aria-label="Idioma">
+              <span id="current-lang-flag" aria-hidden="true">🇪🇸</span>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end lang-menu">
+              <li><button class="dropdown-item" data-lang="es">🇪🇸</button></li>
+              <li><button class="dropdown-item" data-lang="en">🇺🇸</button></li>
+              <li><button class="dropdown-item" data-lang="pt">🇧🇷</button></li>
+            </ul>
           </div>
 
         </div>
-      </nav>
+      </div>
     </nav>
   </header>
+
+
 
   <!-- Hero -->
   <section>
     <div class="hero" id="productos">
       <div class="hero-text">
-        <h1 class="animate__animated animate__jackInTheBox">Productos</h1>
-        <p>Mosquito está disponible en distintas versiones según el tipo de entrenamiento.</p>
+        <h1 class="animate__animated animate__jackInTheBox" data-i18n="productos.titulo">Productos</h1>
+        <p data-i18n="productos.subtitulo">Mosquito está disponible en distintas versiones según el tipo de
+          entrenamiento.</p>
       </div>
     </div>
   </section>
 
   <!-- Contenido -->
   <section class="producto">
-    <h2>Productos</h2>
+    <h2 data-i18n="productos.listado">Productos</h2>
 
     <!-- ===== Mosquito Gym ===== -->
     <div class="producto-detalle producto-detalle--pro">
@@ -91,12 +121,12 @@
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselGym" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
+          <span class="visually-hidden" data-i18n="ui.anterior">Anterior</span>
         </button>
 
         <button class="carousel-control-next" type="button" data-bs-target="#carouselGym" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
+          <span class="visually-hidden" data-i18n="ui.siguiente">Siguiente</span>
         </button>
       </div>
 
@@ -107,45 +137,48 @@
           <h3>Mosquito Gym</h3>
         </div>
 
-        <p>Evaluación de fuerza y movimiento en ejercicios de gimnasio.</p>
+        <p data-i18n="productos.gym.tagline">Evaluación de fuerza y movimiento en ejercicios de gimnasio.</p>
 
-        <p>
+        <p data-i18n="productos.gym.descripcion">
           Sistema de análisis por video para ejercicios de fuerza que permite evaluar técnica, rangos articulares y
           control postural,
           sin sensores, marcadores ni equipamiento adicional. Funciona en ciclos automáticos, listo para usar.
         </p>
 
-        <h4>Qué hace</h4>
+        <h4 data-i18n="productos.gym.que_hace">Qué hace</h4>
         <ul>
-          <li>Analiza movimientos de fuerza a partir de video</li>
-          <li>Detecta repeticiones automáticamente</li>
-          <li>Mide tiempos de fase concéntrica</li>
-          <li>Evalúa alineaciones posturales clave durante el ejercicio</li>
+          <li data-i18n="productos.gym.q1">Analiza movimientos de fuerza a partir de video</li>
+          <li data-i18n="productos.gym.q2">Detecta repeticiones automáticamente</li>
+          <li data-i18n="productos.gym.q3">Mide tiempos de fase concéntrica</li>
+          <li data-i18n="productos.gym.q4">Evalúa alineaciones posturales clave durante el ejercicio</li>
         </ul>
 
-        <h4>Correcciones y feedback</h4>
+        <h4 data-i18n="productos.gym.feedback">Correcciones y feedback</h4>
         <ul>
-          <li>Correcciones visuales en tiempo real</li>
-          <li>Detección de desalineaciones (por ejemplo, espalda alta y baja)</li>
-          <li>Registro de técnica repetición por repetición</li>
+          <li data-i18n="productos.gym.f1">Correcciones visuales en tiempo real</li>
+          <li data-i18n="productos.gym.f2">Detección de desalineaciones (por ejemplo, espalda alta y baja)</li>
+          <li data-i18n="productos.gym.f3">Registro de técnica repetición por repetición</li>
         </ul>
 
-        <h4>Gestión y seguimiento</h4>
+        <h4 data-i18n="productos.gym.gestion">Gestión y seguimiento</h4>
         <ul>
-          <li>Guarda videos corregidos</li>
-          <li>Historial por usuario</li>
-          <li>Exportación de datos para seguimiento y análisis</li>
+          <li data-i18n="productos.gym.g1">Guarda videos corregidos</li>
+          <li data-i18n="productos.gym.g2">Historial por usuario</li>
+          <li data-i18n="productos.gym.g3">Exportación de datos para seguimiento y análisis</li>
         </ul>
 
         <div class="producto-actions">
-          <a href="./contacto.html" class="boton-principal" rel="noopener">Consultar Mosquito Gym</a>
+          <a href="./contacto.html" class="boton-principal" rel="noopener" data-i18n="productos.gym.cta">
+            Consultar Mosquito Gym
+          </a>
         </div>
       </div>
     </div>
 
     <!-- ===== Mosquito Básquet ===== -->
     <div class="producto-detalle producto-detalle--pro">
-      <div id="carouselBasquet" class="carousel slide producto-carousel" data-bs-ride="carousel" data-bs-interval="4500">
+      <div id="carouselBasquet" class="carousel slide producto-carousel" data-bs-ride="carousel"
+        data-bs-interval="4500">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="../img/mosquito-solo.webp" class="d-block w-100" alt="Mosquito Básquet - vista 1" />
@@ -160,56 +193,57 @@
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselBasquet" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
+          <span class="visually-hidden" data-i18n="ui.anterior">Anterior</span>
         </button>
 
         <button class="carousel-control-next" type="button" data-bs-target="#carouselBasquet" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
+          <span class="visually-hidden" data-i18n="ui.siguiente">Siguiente</span>
         </button>
       </div>
 
       <div class="texto-detalle">
-        <!-- logo + before + h3 (TODO en la misma línea) -->
         <div class="product-header">
           <img src="../img/logo-vastech.png" alt="VasTech" class="product-logo-inline" />
           <h3>Mosquito Básquet</h3>
         </div>
 
-        <p>Análisis técnico automático del tiro en contexto real.</p>
+        <p data-i18n="productos.basquet.tagline">Análisis técnico automático del tiro en contexto real.</p>
 
-        <p>
+        <p data-i18n="productos.basquet.descripcion">
           Sistema de evaluación del tiro que analiza cada lanzamiento en tiempo real mediante visión por computadora.
           Detecta inicio/cierre, discrimina piques, identifica lado dominante y evalúa variables clave en vistas lateral
           y frontal.
         </p>
 
-        <h4>Qué hace</h4>
+        <h4 data-i18n="productos.basquet.que_hace">Qué hace</h4>
         <ul>
-          <li>Detecta automáticamente el inicio y el cierre de cada tiro</li>
-          <li>Discrimina piques y acciones no válidas</li>
-          <li>Identifica el lado dominante</li>
-          <li>Evalúa el gesto en vista lateral y frontal</li>
+          <li data-i18n="productos.basquet.q1">Detecta automáticamente el inicio y el cierre de cada tiro</li>
+          <li data-i18n="productos.basquet.q2">Discrimina piques y acciones no válidas</li>
+          <li data-i18n="productos.basquet.q3">Identifica el lado dominante</li>
+          <li data-i18n="productos.basquet.q4">Evalúa el gesto en vista lateral y frontal</li>
         </ul>
 
-        <h4>Feedback tiro por tiro</h4>
+        <h4 data-i18n="productos.basquet.feedback">Feedback tiro por tiro</h4>
         <ul>
-          <li>Postura inicial</li>
-          <li>Armado 90/90</li>
-          <li>Secuencia piernas–brazos</li>
-          <li>Altura de suelta</li>
-          <li>Follow-through</li>
+          <li data-i18n="productos.basquet.f1">Postura inicial</li>
+          <li data-i18n="productos.basquet.f2">Armado 90/90</li>
+          <li data-i18n="productos.basquet.f3">Secuencia piernas–brazos</li>
+          <li data-i18n="productos.basquet.f4">Altura de suelta</li>
+          <li data-i18n="productos.basquet.f5">Follow-through</li>
         </ul>
 
-        <h4>Qué entrega</h4>
+        <h4 data-i18n="productos.basquet.entrega">Qué entrega</h4>
         <ul>
-          <li>Puntajes objetivos por lanzamiento</li>
-          <li>Correcciones visuales y videos con métricas superpuestas</li>
-          <li>Comparación entre sesiones</li>
+          <li data-i18n="productos.basquet.e1">Puntajes objetivos por lanzamiento</li>
+          <li data-i18n="productos.basquet.e2">Correcciones visuales y videos con métricas superpuestas</li>
+          <li data-i18n="productos.basquet.e3">Comparación entre sesiones</li>
         </ul>
 
         <div class="producto-actions">
-          <a href="./contacto.html" class="boton-principal" rel="noopener">Consultar Mosquito Básquet</a>
+          <a href="./contacto.html" class="boton-principal" rel="noopener" data-i18n="productos.basquet.cta">
+            Consultar Mosquito Básquet
+          </a>
         </div>
       </div>
     </div>
@@ -237,54 +271,56 @@
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselBosco" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
+          <span class="visually-hidden" data-i18n="ui.anterior">Anterior</span>
         </button>
 
         <button class="carousel-control-next" type="button" data-bs-target="#carouselBosco" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
+          <span class="visually-hidden" data-i18n="ui.siguiente">Siguiente</span>
         </button>
       </div>
 
       <div class="texto-detalle">
-        <!-- logo + before + h3 (TODO en la misma línea) -->
         <div class="product-header">
           <img src="../img/logo-vastech.png" alt="VasTech" class="product-logo-inline" />
           <h3>Mosquito Bosco</h3>
         </div>
 
-        <p>Análisis de saltabilidad con base científica (video + física).</p>
+        <p data-i18n="productos.bosco.tagline">Análisis de saltabilidad con base científica (video + física).</p>
 
-        <p>
+        <p data-i18n="productos.bosco.descripcion">
           Sistema integral para evaluar el salto vertical combinando análisis de video y modelos físicos.
-          Estima automáticamente tiempo de vuelo, altura de salto y velocidad inicial (V0), con posibilidad de corrección manual
+          Estima automáticamente tiempo de vuelo, altura de salto y velocidad inicial (V0), con posibilidad de
+          corrección manual
           usando alfombra de contacto u otros dispositivos.
         </p>
 
-        <h4>Qué mide</h4>
+        <h4 data-i18n="productos.bosco.mide">Qué mide</h4>
         <ul>
-          <li>Tiempo de vuelo</li>
-          <li>Altura del salto</li>
-          <li>Velocidad inicial (V0)</li>
+          <li data-i18n="productos.bosco.m1">Tiempo de vuelo</li>
+          <li data-i18n="productos.bosco.m2">Altura del salto</li>
+          <li data-i18n="productos.bosco.m3">Velocidad inicial (V0)</li>
         </ul>
 
-        <h4>Análisis técnico (vista lateral y frontal)</h4>
+        <h4 data-i18n="productos.bosco.analisis">Análisis técnico (vista lateral y frontal)</h4>
         <ul>
-          <li>Profundidad de rodilla</li>
-          <li>Inclinación de tronco</li>
-          <li>Alineación tobillo–rodilla–cadera</li>
-          <li>Asimetrías y control postural</li>
+          <li data-i18n="productos.bosco.a1">Profundidad de rodilla</li>
+          <li data-i18n="productos.bosco.a2">Inclinación de tronco</li>
+          <li data-i18n="productos.bosco.a3">Alineación tobillo–rodilla–cadera</li>
+          <li data-i18n="productos.bosco.a4">Asimetrías y control postural</li>
         </ul>
 
-        <h4>Resultados y seguimiento</h4>
+        <h4 data-i18n="productos.bosco.resultados">Resultados y seguimiento</h4>
         <ul>
-          <li>Informes en video</li>
-          <li>Registros históricos comparables</li>
-          <li>Exportación de datos en CSV</li>
+          <li data-i18n="productos.bosco.r1">Informes en video</li>
+          <li data-i18n="productos.bosco.r2">Registros históricos comparables</li>
+          <li data-i18n="productos.bosco.r3">Exportación de datos en CSV</li>
         </ul>
 
         <div class="producto-actions">
-          <a href="./contacto.html" class="boton-principal" rel="noopener">Consultar Mosquito Bosco</a>
+          <a href="./contacto.html" class="boton-principal" rel="noopener" data-i18n="productos.bosco.cta">
+            Consultar Mosquito Bosco
+          </a>
         </div>
       </div>
     </div>
@@ -292,50 +328,54 @@
   </section>
 
   <!-- Footer -->
-<footer>
-  <!-- Marca -->
-  <div class="footer-brand">
-    <a href="/index.html" aria-label="VasTech">
-      <img src="/img/logo-vastech.png" alt="VasTech" class="footer-logo">
-    </a>
-  </div>
+  <footer>
+    <!-- Marca -->
+    <div class="footer-brand">
+      <a href="/index.html" aria-label="VasTech">
+        <img src="/img/logo-vastech.png" alt="VasTech" class="footer-logo">
+      </a>
+    </div>
 
-  <div class="footer-social">
-    <!-- <a href="#" target="_blank"><i class="bi bi-facebook"></i></a> -->
-    <a href="https://www.instagram.com/vastech.ar/" target="_blank" rel="noopener" aria-label="Instagram">
-      <i class="bi bi-instagram"></i>
-    </a>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/vastech.ar/" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
 
-    <!-- <a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a> -->
+      <a href="https://wa.me/5493482374489" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
 
-    <a href="https://wa.me/5493482374489" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <i class="bi bi-whatsapp"></i>
-    </a>
+      <a href="https://www.youtube.com/@VasTech_arg" target="_blank" rel="noopener" aria-label="YouTube">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
 
-    <a href="https://www.youtube.com/@VasTech_arg" target="_blank" rel="noopener" aria-label="YouTube">
-      <i class="bi bi-youtube"></i>
-    </a>
-  </div>
+    <div class="footer-contact">
+      <h4><a href="/pages/contacto.html" data-i18n="footer.contacto">Contacto</a></h4>
+      <p data-i18n="footer.telefono">Teléfono: +54 9 3482 374489</p>
+      <p data-i18n="footer.email">Email: info@vastech.com.ar</p>
+      <p data-i18n="footer.direccion">Dirección: Habegger 2055, Reconquista</p>
+      <p data-i18n="footer.copy">&copy; 2025 VasTech® | CUIT: 20-35114665-7</p>
+    </div>
 
-  <div class="footer-contact">
-    <h4><a href="/pages/contacto.html">Contacto</a></h4>
-    <p>Teléfono: +54 9 3482 374489</p>
-    <p>Email: info@vastech.com.ar</p>
-    <p>Dirección: Habegger 2055, Reconquista</p>
-    <p>&copy; 2025 VasTech® | CUIT: 20-35114665-7</p>
-  </div>
-
-  <div class="footer-about">
-    <h4><a href="/pages/nosotros.html">Sobre VasTech</a></h4>
-    <p>En VasTech buscamos ayudarte a mejorar tu rendimiento con la mejor tecnología y asesoramiento.</p>
-  </div>
-</footer>
-
+    <div class="footer-about">
+      <h4><a href="/pages/nosotros.html" data-i18n="footer.sobre">Sobre VasTech</a></h4>
+      <p data-i18n="footer.descripcion">En VasTech buscamos ayudarte a mejorar tu rendimiento con la mejor tecnología y
+        asesoramiento.</p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- i18n (idiomas) -->
+  <script src="../js/i18n.js"></script>
+
 </body>
 
 </html>

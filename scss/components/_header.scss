@@ -86,3 +86,57 @@
 .navbar-toggler {
     display: none !important;
 }
+
+/* ===== Dropdown idioma ===== */
+.lang-dropdown .btn-lang {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 38px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 0;
+}
+
+.lang-dropdown .btn-lang:hover,
+.lang-dropdown .btn-lang:focus {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: none;
+}
+
+.lang-dropdown .btn-lang i {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Menú */
+.lang-menu {
+    min-width: 90px;
+    padding: 8px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Items con banderas */
+.lang-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 22px;
+    background: transparent;
+    color: #fff;
+}
+
+.lang-item:hover,
+.lang-item:focus {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}

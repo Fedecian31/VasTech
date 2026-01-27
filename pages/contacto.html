@@ -7,6 +7,7 @@
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Contacto - VasTech</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,6 +18,7 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <meta name="description"
         content="Contactanos en VasTech para resolver tus dudas, pedir una demo o saber más sobre nuestro dispositivo Mosquito.">
     <meta name="keywords"
@@ -36,103 +38,141 @@
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <nav class="navbar">
-                <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
-                    <a class="navbar-brand brand" href="../index.html" aria-label="VasTech">
-                        <img src="../img/logo-vastech.png" alt="VasTech" class="brand__logo">
-                        <span class="brand__text">VasTech</span>
-                    </a>
-                    <div class="navbar-nav d-flex flex-row flex-wrap gap-3">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                        <!-- <a class="nav-link" href="./tienda.html">Tienda</a> -->
-                        <a class="nav-link" href="./productos.html">Productos</a>
-                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
-                        <a class="nav-link active" aria-current="page" href="./contacto.html">Consultas</a>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+
+                <!-- Logo -->
+                <a class="navbar-brand brand" href="../index.html" aria-label="VasTech">
+                    <img src="../img/logo-vastech.png" alt="VasTech" class="brand__logo brand__logo--desktop">
+                    <span class="brand__mobile">
+                        <img src="../img/aguila.png" alt="VasTech" class="brand__eagle">
+                        <img src="../img/vastech.png" alt="VasTech" class="brand__word">
+                    </span>
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="navMenu">
+
+                    <!-- LINKS: izquierda -->
+                    <div class="navbar-nav me-auto">
+                        <a class="nav-link" href="../index.html" data-i18n="nav.inicio">Inicio</a>
+                        <a class="nav-link" href="./productos.html" data-i18n="nav.productos">Productos</a>
+                        <a class="nav-link" href="./nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+                        <a class="nav-link" href="./contacto.html" data-i18n="nav.consultas">Consultas</a>
                     </div>
+
+                    <!-- IDIOMA: derecha -->
+                    <div class="dropdown lang-dropdown ms-md-3 mt-3 mt-md-0">
+                        <button class="btn btn-lang dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" aria-label="Idioma">
+                            <span id="current-lang-flag" aria-hidden="true">🇪🇸</span>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end lang-menu">
+                            <li><button class="dropdown-item" data-lang="es">🇪🇸</button></li>
+                            <li><button class="dropdown-item" data-lang="en">🇺🇸</button></li>
+                            <li><button class="dropdown-item" data-lang="pt">🇧🇷</button></li>
+                        </ul>
+                    </div>
+
                 </div>
-                </div>
-            </nav>
+            </div>
+        </nav>
     </header>
+
+
 
     <section>
         <div class="hero" id="contacto">
             <div class="hero-text">
-                <h1 class="animate__animated animate__jackInTheBox">Consultas</h1>
-                <p>¿Tenés una duda o querés trabajar con nosotros? Escribinos.</p>
-                <a href="/pages/productos.html">Productos</a>
+                <h1 class="animate__animated animate__jackInTheBox" data-i18n="contacto.hero.titulo">Consultas</h1>
+                <p data-i18n="contacto.hero.subtitulo">¿Tenés una duda o querés trabajar con nosotros? Escribinos.</p>
+                <a href="/pages/productos.html" data-i18n="contacto.hero.cta_productos">Productos</a>
             </div>
         </div>
     </section>
 
     <section class="contacto">
-    <div class="contacto-header">
-        <img src="../img/logo-vastech.png" alt="VasTech" class="contacto-logo">
-        <h2>Consultas</h2>
-    </div>
+        <div class="contacto-header">
+            <img src="../img/logo-vastech.png" alt="VasTech" class="contacto-logo">
+            <h2 data-i18n="contacto.form.titulo">Consultas</h2>
+        </div>
 
-    <p>¿Querés más información? ¡Escribinos!</p>
+        <p data-i18n="contacto.form.intro">¿Querés más información? ¡Escribinos!</p>
 
         <form id="contactoForm" action="procesar_formulario.php" method="POST" class="contacto-form" novalidate>
 
-            <label for="nombre_apellido">Nombre y apellido:</label>
+            <label for="nombre_apellido" data-i18n="contacto.form.nombre_label">Nombre y apellido:</label>
             <input type="text" id="nombre_apellido" name="nombre_apellido" required maxlength="100">
-            <div id="nombre_apellidoError" class="error-text">Ingresá tu nombre y apellido (mínimo 3 caracteres).</div>
+            <div id="nombre_apellidoError" class="error-text" data-i18n="contacto.errores.nombre">
+                Ingresá tu nombre y apellido (mínimo 3 caracteres).
+            </div>
 
-            <label for="mail">Mail:</label>
+            <label for="mail" data-i18n="contacto.form.mail_label">Mail:</label>
             <input type="email" id="mail" name="mail" required maxlength="120">
-            <div id="mailError" class="error-text">Mail inválido. Debe tener “@” y un dominio válido.</div>
+            <div id="mailError" class="error-text" data-i18n="contacto.errores.mail">
+                Mail inválido. Debe tener “@” y un dominio válido.
+            </div>
 
-            <label for="pais">País:</label>
+            <label for="pais" data-i18n="contacto.form.pais_label">País:</label>
             <input type="text" id="pais" name="pais" required maxlength="60">
-            <div id="paisError" class="error-text">Ingresá un país válido.</div>
+            <div id="paisError" class="error-text" data-i18n="contacto.errores.pais">
+                Ingresá un país válido.
+            </div>
 
-            <label for="provincia">Provincia:</label>
+            <label for="provincia" data-i18n="contacto.form.provincia_label">Provincia:</label>
             <input type="text" id="provincia" name="provincia" required maxlength="60">
-            <div id="provinciaError" class="error-text">Ingresá una provincia válida.</div>
+            <div id="provinciaError" class="error-text" data-i18n="contacto.errores.provincia">
+                Ingresá una provincia válida.
+            </div>
 
-            <label for="ciudad">Ciudad:</label>
+            <label for="ciudad" data-i18n="contacto.form.ciudad_label">Ciudad:</label>
             <input type="text" id="ciudad" name="ciudad" required maxlength="60">
-            <div id="ciudadError" class="error-text">Ingresá una ciudad válida.</div>
+            <div id="ciudadError" class="error-text" data-i18n="contacto.errores.ciudad">
+                Ingresá una ciudad válida.
+            </div>
 
-            <label for="institucion">Institución:</label>
+            <label for="institucion" data-i18n="contacto.form.institucion_label">Institución:</label>
             <input type="text" id="institucion" name="institucion" required maxlength="120">
-            <div id="institucionError" class="error-text">Ingresá el nombre de la institución.</div>
+            <div id="institucionError" class="error-text" data-i18n="contacto.errores.institucion">
+                Ingresá el nombre de la institución.
+            </div>
 
-            <label for="producto">Información sobre el producto:</label>
+            <label for="producto" data-i18n="contacto.form.producto_label">Información sobre el producto:</label>
             <select id="producto" name="producto" required>
-                <option value="" selected disabled>Seleccioná una opción</option>
+                <option value="" selected disabled data-i18n="contacto.form.producto_placeholder">Seleccioná una opción
+                </option>
                 <option value="mosquito_basquet">Mosquito Basket</option>
                 <option value="mosquito_gym">Mosquito Gym</option>
                 <option value="bosco">Bosco</option>
                 <option value="combo">Combo</option>
             </select>
-            <div id="productoError" class="error-text">Elegí una opción del desplegable.</div>
+            <div id="productoError" class="error-text" data-i18n="contacto.errores.producto">
+                Elegí una opción del desplegable.
+            </div>
 
-            <label for="mensaje">Mensaje:</label>
+            <label for="mensaje" data-i18n="contacto.form.mensaje_label">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" rows="5" required maxlength="3000"></textarea>
-            <div id="mensajeError" class="error-text">Escribí un mensaje válido (mínimo 10 caracteres).</div>
+            <div id="mensajeError" class="error-text" data-i18n="contacto.errores.mensaje">
+                Escribí un mensaje válido (mínimo 10 caracteres).
+            </div>
 
             <!-- Honeypot anti-bots -->
             <input type="text" name="empresa" autocomplete="off" tabindex="-1"
                 style="position:absolute; left:-9999px; height:0; width:0; opacity:0;">
 
-            <button type="submit">Enviar</button>
+            <button type="submit" data-i18n="contacto.form.enviar">Enviar</button>
 
             <p id="form-status" class="form-status" style="margin-top:10px;"></p>
         </form>
-
-        <!-- <hr> -->
-
-        <!-- <p>O podés contactarnos directamente:</p>
-        <ul class="contacto-lista">
-            <li>Email: <a href="mailto:info@vastech.com.ar">info@vastech.com.ar</a></li>
-            <li>WhatsApp: <a href="https://wa.me/5493482374489" target="_blank">+54 3482 374489</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/vastech.ar" target="_blank">@vastech.ar</a></li>
-        </ul> -->
     </section>
 
-    <!--Pie de Pagina-->
     <!--Pie de Pagina-->
     <footer>
         <!-- Marca -->
@@ -143,12 +183,9 @@
         </div>
 
         <div class="footer-social">
-            <!-- <a href="#" target="_blank"><i class="bi bi-facebook"></i></a> -->
             <a href="https://www.instagram.com/vastech.ar/" target="_blank" rel="noopener" aria-label="Instagram">
                 <i class="bi bi-instagram"></i>
             </a>
-
-            <!-- <a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a> -->
 
             <a href="https://wa.me/5493482374489" target="_blank" rel="noopener" aria-label="WhatsApp">
                 <i class="bi bi-whatsapp"></i>
@@ -160,19 +197,20 @@
         </div>
 
         <div class="footer-contact">
-            <h4><a href="/pages/contacto.html">Contacto</a></h4>
-            <p>Teléfono: +54 9 3482 374489</p>
-            <p>Email: info@vastech.com.ar</p>
-            <p>Dirección: Habegger 2055, Reconquista</p>
-            <p>&copy; 2025 VasTech® | CUIT: 20-35114665-7</p>
+            <h4><a href="/pages/contacto.html" data-i18n="footer.contacto">Contacto</a></h4>
+            <p data-i18n="footer.telefono">Teléfono: +54 9 3482 374489</p>
+            <p data-i18n="footer.email">Email: info@vastech.com.ar</p>
+            <p data-i18n="footer.direccion">Dirección: Habegger 2055, Reconquista</p>
+            <p data-i18n="footer.copy">&copy; 2025 VasTech® | CUIT: 20-35114665-7</p>
         </div>
 
         <div class="footer-about">
-            <h4><a href="/pages/nosotros.html">Sobre VasTech</a></h4>
-            <p>En VasTech buscamos ayudarte a mejorar tu rendimiento con la mejor tecnología y asesoramiento.</p>
+            <h4><a href="/pages/nosotros.html" data-i18n="footer.sobre">Sobre VasTech</a></h4>
+            <p data-i18n="footer.descripcion">
+                En VasTech buscamos ayudarte a mejorar tu rendimiento con la mejor tecnología y asesoramiento.
+            </p>
         </div>
     </footer>
-
 
 </body>
 
@@ -182,7 +220,10 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<!-- JS del contacto en la MISMA carpeta /pages para evitar quilombos de rutas -->
+<!-- JS del contacto en la MISMA carpeta /pages -->
 <script src="./contacto.js"></script>
+
+<!-- i18n (idiomas) -->
+<script src="../js/i18n.js"></script>
 
 </html>

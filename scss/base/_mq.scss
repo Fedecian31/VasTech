@@ -1,26 +1,76 @@
-/*-Navbar-*/
+/* ===== Navbar: logo desktop vs mobile ===== */
+.brand__mobile {
+    display: none;
+}
+
+.brand__logo--desktop {
+    display: block;
+}
+
+/* IMPORTANTE: vos tenías el toggler oculto, lo habilitamos */
+.navbar-toggler {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
+
+    /* Mostrar hamburguesa */
+    .navbar-toggler {
+        display: inline-flex !important;
+    }
+
+    /* Cambiar logo en mobile */
+    .brand__logo--desktop {
+        display: none;
+    }
+
+    .brand__mobile {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .brand__eagle {
+        height: 28px;
+        width: auto;
+        display: block;
+    }
+
+    .brand__word {
+        height: 18px;
+        width: auto;
+        display: block;
+    }
+
+    /* Estilo del botón hamburguesa (para que se vea en tu fondo oscuro) */
+    .navbar-toggler {
+        border: 1px solid rgba(58, 141, 255, 0.45);
+        padding: 6px 10px;
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(1);
+        /* icono blanco */
+    }
+
+    /* Menú desplegable prolijo */
+    .navbar-collapse {
+        margin-top: 12px;
+    }
+
     .navbar-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        gap: 10px;
     }
 
     .navbar .nav-link {
-        font-size: 16px !important;
-        padding: 0.4rem 0.6rem;
-    }
-
-    .navbar-brand {
-        font-size: 28px !important;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background: rgba(17, 34, 64, 0.55);
     }
 }
 
-@media (max-width: 768px) {
-    .brand-logo {
-        height: 34px;
-    }
-}
+
+
 
 /*-Hero-*/
 

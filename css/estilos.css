@@ -97,6 +97,60 @@ body {
   display: none !important;
 }
 
+/* ===== Dropdown idioma ===== */
+.lang-dropdown .btn-lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 0;
+}
+
+.lang-dropdown .btn-lang:hover,
+.lang-dropdown .btn-lang:focus {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: none;
+}
+
+.lang-dropdown .btn-lang i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Menú */
+.lang-menu {
+  min-width: 90px;
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Items con banderas */
+.lang-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 22px;
+  background: transparent;
+  color: #fff;
+}
+
+.lang-item:hover,
+.lang-item:focus {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
 /*-Hero-*/
 .hero {
   color: white;
@@ -156,20 +210,24 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.22);
-  gap: 12px;
+  gap: 18px;
   padding: 18px 22px;
   border-radius: 20px;
   z-index: 10;
   max-width: 900px;
   border: 1px solid rgba(224, 224, 224, 0.1);
+  border-width: 1px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  opacity: 0.85;
 }
 .hero-text .hero-link {
   background: transparent;
   border: none;
   padding: 5px;
   box-shadow: none;
-  font-weight: 700;
+  font-weight: 600;
+  opacity: 0.75;
 }
 .hero-text .hero-link:hover {
   background: transparent;
@@ -201,6 +259,8 @@ body {
   margin: 4px 0 0;
 }
 .hero-text a {
+  transform: scale(0.95);
+  opacity: 0.9;
   color: #E0E0E0;
   background-color: #1E2A44;
   padding: 10px 20px;
@@ -855,24 +915,64 @@ footer .footer-about p {
     font-size: 13px;
   }
 }
-/*-Navbar-*/
+/* ===== Navbar: logo desktop vs mobile ===== */
+.brand__mobile {
+  display: none;
+}
+
+.brand__logo--desktop {
+  display: block;
+}
+
+/* IMPORTANTE: vos tenías el toggler oculto, lo habilitamos */
+.navbar-toggler {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
+  /* Mostrar hamburguesa */
+  .navbar-toggler {
+    display: inline-flex !important;
+  }
+  /* Cambiar logo en mobile */
+  .brand__logo--desktop {
+    display: none;
+  }
+  .brand__mobile {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand__eagle {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+  .brand__word {
+    height: 18px;
+    width: auto;
+    display: block;
+  }
+  /* Estilo del botón hamburguesa (para que se vea en tu fondo oscuro) */
+  .navbar-toggler {
+    border: 1px solid rgba(58, 141, 255, 0.45);
+    padding: 6px 10px;
+  }
+  .navbar-toggler-icon {
+    filter: invert(1);
+    /* icono blanco */
+  }
+  /* Menú desplegable prolijo */
+  .navbar-collapse {
+    margin-top: 12px;
+  }
   .navbar-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    gap: 10px;
   }
   .navbar .nav-link {
-    font-size: 16px !important;
-    padding: 0.4rem 0.6rem;
-  }
-  .navbar-brand {
-    font-size: 28px !important;
-  }
-}
-@media (max-width: 768px) {
-  .brand-logo {
-    height: 34px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(17, 34, 64, 0.55);
   }
 }
 /*-Hero-*/
