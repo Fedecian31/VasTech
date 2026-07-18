@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <title>Aplicaciones | VasTech</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <meta name="description"
+        content="Descargá las aplicaciones de VasTech para utilizar Mosquito Gym, Bosco y Básquet desde tu celular. Conocé también la próxima aplicación de Mosquito Pádel.">
+
+    <meta name="keywords"
+        content="VasTech app, aplicaciones VasTech, Mosquito Gym, Mosquito Bosco, Mosquito Básquet, Mosquito Pádel, análisis deportivo, tecnología deportiva">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TYTLMSGP8J"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-TYTLMSGP8J");
+</script>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+
+                <!-- Logo -->
+                <a class="navbar-brand brand" href="../index.html" aria-label="VasTech">
+                    <img src="../img/logo-vastech.png" alt="VasTech" class="brand__logo brand__logo--desktop">
+
+                    <span class="brand__mobile">
+                        <img src="../img/aguila.png" alt="VasTech" class="brand__eagle">
+                        <img src="../img/vastech.png" alt="VasTech" class="brand__word">
+                    </span>
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <div class="navbar-nav me-auto">
+                        <a class="nav-link" href="../index.html" data-i18n="nav.inicio">Inicio</a>
+                        <a class="nav-link" href="./productos.html" data-i18n="nav.productos">Productos</a>
+                        <a class="nav-link" href="./aplicacion.html" data-i18n="nav.aplicacion">Aplicaciones</a>
+                        <a class="nav-link" href="./nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+                        <a class="nav-link" href="./contacto.html" data-i18n="nav.consultas">Consultas</a>
+                    </div>
+
+                    <!-- Idioma -->
+                    <div class="dropdown lang-dropdown ms-md-3 mt-3 mt-md-0">
+                        <button class="btn btn-lang dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" aria-label="Idioma">
+                            <span id="current-lang-flag" aria-hidden="true">🇪🇸</span>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end lang-menu">
+                            <li><button class="dropdown-item" data-lang="es">🇪🇸</button></li>
+                            <li><button class="dropdown-item" data-lang="en">🇺🇸</button></li>
+                            <li><button class="dropdown-item" data-lang="pt">🇧🇷</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section>
+        <div class="hero" id="productos">
+            <div class="hero-text">
+                <h1 class="animate__animated animate__jackInTheBox" data-i18n="app.hero.titulo">
+                    Aplicaciones VasTech
+                </h1>
+
+                <p data-i18n="app.hero.subtitulo">
+                    Cada producto utiliza una aplicación adaptada a su tipo de análisis deportivo.
+                </p>
+
+                <a href="#aplicaciones" data-i18n="app.hero.cta">
+                    Ver aplicaciones
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="producto" id="aplicaciones">
+
+            <h2 data-i18n="app.contenido.titulo">
+                Elegí la aplicación para tu Mosquito
+            </h2>
+
+            <!-- Explicación general -->
+            <div class="producto-detalle producto-detalle--pro">
+                <div class="texto-detalle">
+
+                    <div class="product-header">
+                        <img src="../img/logo-vastech.png" alt="VasTech" class="product-logo-inline">
+                        <h3 data-i18n="app.intro.nombre">Aplicaciones VasTech</h3>
+                    </div>
+
+                    <p data-i18n="app.intro.descripcion">
+                        Mosquito Gym y Mosquito Bosco comparten una misma aplicación. Mosquito Básquet funciona con
+                        una aplicación separada y Mosquito Pádel contará con su propia aplicación.
+                    </p>
+
+                    <h4 data-i18n="app.intro.importante">Importante</h4>
+
+                    <ul>
+                        <li data-i18n="app.intro.i1">Gym y Bosco utilizan la misma aplicación.</li>
+                        <li data-i18n="app.intro.i2">Básquet funciona con una aplicación independiente.</li>
+                        <li data-i18n="app.intro.i3">Pádel tendrá una aplicación independiente próximamente.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- Gym + Bosco -->
+            <div class="producto-detalle producto-detalle--pro">
+
+                <div id="carouselAppGym" class="carousel slide producto-carousel" data-bs-ride="carousel"
+                    data-bs-interval="4500">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="../img/app-gym-1.webp" class="d-block w-100"
+                                alt="Pantalla de conexión de la aplicación Mosquito Gym">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../img/app-gym-2.webp" class="d-block w-100"
+                                alt="Pantalla principal de la aplicación Mosquito Gym y Bosco">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../img/app-gym-3.webp" class="d-block w-100"
+                                alt="Análisis completado en la aplicación Mosquito Gym">
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselAppGym" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="ui.anterior">Anterior</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselAppGym" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="ui.siguiente">Siguiente</span>
+                    </button>
+
+                </div>
+                <div class="texto-detalle">
+
+                    <div class="product-header">
+                        <img src="../img/logo-vastech.png" alt="VasTech" class="product-logo-inline">
+                        <h3 data-i18n="app.gym_bosco.nombre">Mosquito Gym + Bosco</h3>
+                    </div>
+
+                    <p data-i18n="app.gym_bosco.descripcion">
+                        Mosquito Gym y Mosquito Bosco utilizan la misma aplicación. Desde ella podés controlar y
+                        gestionar las sesiones de entrenamiento desde tu celular.
+                    </p>
+
+                    <h4 data-i18n="app.gym_bosco.para">Esta aplicación se utiliza para</h4>
+
+                    <ul>
+                        <li data-i18n="app.gym_bosco.i1">Análisis de ejercicios de fuerza y gimnasio.</li>
+                        <li data-i18n="app.gym_bosco.i2">Evaluaciones de salto con Mosquito Bosco.</li>
+                        <li data-i18n="app.gym_bosco.i3">Control y gestión de las sesiones desde el celular.</li>
+                    </ul>
+
+                    <div class="producto-actions">
+                        <a href="#" id="btn-gym-bosco-auto" class="boton-principal"
+                            data-i18n="app.gym_bosco.boton_auto">
+                            Descargar según mi dispositivo
+                        </a>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.mosquito.gym"
+                            id="btn-gym-bosco-play" class="link-secundario" target="_blank"
+                            rel="noopener noreferrer" data-i18n="app.botones.android">
+                            Google Play
+                        </a>
+
+                        <a href="https://apps.apple.com/ar/app/mosquito-gym/id6776883349"
+                            id="btn-gym-bosco-appstore" class="link-secundario" target="_blank"
+                            rel="noopener noreferrer" data-i18n="app.botones.ios">
+                            App Store
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Básquet -->
+            <div class="producto-detalle producto-detalle--pro">
+
+                <div id="carouselAppBasquet" class="carousel slide producto-carousel" data-bs-ride="carousel"
+                    data-bs-interval="4500">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="../img/app-basquet-1.webp" class="d-block w-100"
+                                alt="Pantalla de carga de la aplicación Mosquito Básquet">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../img/app-basquet-2.webp" class="d-block w-100"
+                                alt="Pantalla principal de la aplicación Mosquito Básquet">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../img/app-basquet-3.webp" class="d-block w-100"
+                                alt="Análisis completado en la aplicación Mosquito Básquet">
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselAppBasquet" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="ui.anterior">Anterior</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselAppBasquet" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" data-i18n="ui.siguiente">Siguiente</span>
+                    </button>
+
+                </div>
+                <div class="texto-detalle">
+
+                    <div class="product-header">
+                        <img src="../img/logo-vastech.png" alt="VasTech" class="product-logo-inline">
+                        <h3 data-i18n="app.basquet.nombre">Mosquito Básquet</h3>
+                    </div>
+
+                    <p data-i18n="app.basquet.descripcion">
+                        Mosquito Básquet cuenta con una aplicación propia, separada de Gym y Bosco, pensada
+                        específicamente para el análisis técnico del tiro y la gestión de sesiones de lanzamiento.
+                    </p>
+
+                    <h4 data-i18n="app.basquet.para">Esta aplicación se utiliza para</h4>
+
+                    <ul>
+                        <li data-i18n="app.basquet.i1">Gestionar sesiones de tiro.</li>
+                        <li data-i18n="app.basquet.i2">Seleccionar el tipo de análisis.</li>
+                        <li data-i18n="app.basquet.i3">Consultar los videos y resultados registrados.</li>
+                    </ul>
+
+                    <div class="producto-actions">
+                        <a href="#" id="btn-basquet-auto" class="boton-principal"
+                            data-i18n="app.basquet.boton_auto">
+                            Descargar según mi dispositivo
+                        </a>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.mosquito.basket"
+                            id="btn-basquet-play" class="link-secundario" target="_blank"
+                            rel="noopener noreferrer" data-i18n="app.botones.android">
+                            Google Play
+                        </a>
+
+                        <a href="https://apps.apple.com/ar/app/mosquito-basket/id6764440914"
+                            id="btn-basquet-appstore" class="link-secundario" target="_blank"
+                            rel="noopener noreferrer" data-i18n="app.botones.ios">
+                            App Store
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Pádel -->
+            <div class="producto-detalle producto-detalle--pro">
+                <div class="texto-detalle">
+
+                    <div class="product-header">
+                        <img src="../img/logo-vastech.png" alt="VasTech" class="product-logo-inline">
+                        <h3 data-i18n="app.padel.nombre">Mosquito Pádel</h3>
+                    </div>
+
+                    <p data-i18n="app.padel.descripcion">
+                        Mosquito Pádel funciona con una aplicación propia, desarrollada específicamente para el
+                        análisis de golpes y correcciones técnicas dentro de la cancha.
+                    </p>
+
+                    <h4 data-i18n="app.padel.estado">Estado de la aplicación</h4>
+
+                    <p data-i18n="app.padel.disponibilidad">
+                        Próximamente disponible para Android y iPhone.
+                    </p>
+
+                    <div class="producto-actions">
+                        <a href="./contacto.html" class="boton-principal" data-i18n="app.padel.consultar">
+                            Consultar por Mosquito Pádel
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-brand">
+            <a href="../index.html" aria-label="VasTech">
+                <img src="../img/logo-vastech.png" alt="VasTech" class="footer-logo">
+            </a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/vastech.ar/" target="_blank"
+                rel="noopener noreferrer" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/5493482374489" target="_blank"
+                rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@VasTech_arg" target="_blank"
+                rel="noopener noreferrer" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+            </a>
+        </div>
+
+        <div class="footer-contact">
+            <h4><a href="./contacto.html" data-i18n="footer.contacto">Contacto</a></h4>
+            <p data-i18n="footer.telefono">Teléfono: +54 9 3482 374489</p>
+            <p data-i18n="footer.email">Email: info@vastech.com.ar</p>
+            <p data-i18n="footer.direccion">Dirección: Habegger 2055, Reconquista</p>
+            <p data-i18n="footer.copy">&copy; 2025 VasTech® | CUIT: 20-35114665-7</p>
+        </div>
+
+        <div class="footer-about">
+            <h4><a href="./nosotros.html" data-i18n="footer.sobre">Sobre VasTech</a></h4>
+            <p data-i18n="footer.descripcion">
+                En VasTech buscamos ayudarte a mejorar tu rendimiento con la mejor tecnología y asesoramiento.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Idiomas -->
+    <script src="../js/i18n.js"></script>
+
+    <!-- Detección del dispositivo -->
+    <script>
+        const STORE_LINKS = {
+            gymBosco: {
+                play: "https://play.google.com/store/apps/details?id=com.mosquito.gym",
+                appstore: "https://apps.apple.com/ar/app/mosquito-gym/id6776883349"
+            },
+
+            basquet: {
+                play: "https://play.google.com/store/apps/details?id=com.mosquito.basket",
+                appstore: "https://apps.apple.com/ar/app/mosquito-basket/id6764440914"
+            }
+        };
+
+        function detectarDispositivo() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const esIPadOS = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+
+            if (/android/i.test(userAgent)) {
+                return "android";
+            }
+
+            if (/iPad|iPhone|iPod/i.test(userAgent) || esIPadOS) {
+                return "ios";
+            }
+
+            return "desktop";
+        }
+
+        function configurarBotones(prefix, links) {
+            const botonAutomatico = document.getElementById(`btn-${prefix}-auto`);
+            const botonPlayStore = document.getElementById(`btn-${prefix}-play`);
+            const botonAppStore = document.getElementById(`btn-${prefix}-appstore`);
+
+            if (!botonAutomatico || !botonPlayStore || !botonAppStore) {
+                return;
+            }
+
+            botonPlayStore.href = links.play;
+            botonAppStore.href = links.appstore;
+
+            const dispositivo = detectarDispositivo();
+
+            if (dispositivo === "android") {
+                botonAutomatico.href = links.play;
+                botonAutomatico.target = "_blank";
+                botonAutomatico.rel = "noopener noreferrer";
+
+                botonPlayStore.hidden = true;
+                botonAppStore.hidden = true;
+                return;
+            }
+
+            if (dispositivo === "ios") {
+                botonAutomatico.href = links.appstore;
+                botonAutomatico.target = "_blank";
+                botonAutomatico.rel = "noopener noreferrer";
+
+                botonPlayStore.hidden = true;
+                botonAppStore.hidden = true;
+                return;
+            }
+
+            botonAutomatico.hidden = true;
+        }
+
+        configurarBotones("gym-bosco", STORE_LINKS.gymBosco);
+        configurarBotones("basquet", STORE_LINKS.basquet);
+    </script>
+
+</body>
+
+</html>

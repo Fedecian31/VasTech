@@ -23,7 +23,7 @@
     ========================= */
     const translations = {
         es: {
-            nav: { inicio: "Inicio", productos: "Productos", nosotros: "Nosotros", consultas: "Consultas" },
+            nav: { inicio: "Inicio", productos: "Productos", aplicacion: "Aplicación", nosotros: "Nosotros", consultas: "Consultas" },
             hero: {
                 subtitulo: "Entrená con precisión",
                 descripcion: "Dejá de corregir a ciegas. Convertí correcciones en progreso medible.",
@@ -39,6 +39,28 @@
                 b3_titulo: "Feedback visual diferido",
                 b3_desc: "Revisá tu técnica justo después de entrenar y detectá oportunidades de mejora sin distracciones.",
                 cta: "Conocé el producto",
+            },
+            app: {
+                hero: {
+                    titulo: "Aplicación VasTech",
+                    subtitulo: "Controlá Mosquito desde tu celular y hacé que el entrenamiento sea más simple, rápido y práctico.",
+                    cta: "Descargar aplicación",
+                },
+                contenido: {
+                    titulo: "Una forma más simple de usar Mosquito",
+                    nombre: "App VasTech",
+                    descripcion: "La aplicación permite controlar Mosquito desde el celular para iniciar, pausar y gestionar el uso del sistema sin depender del mouse o teclado. Está pensada para entrenadores, profesores y deportistas que necesitan una experiencia más ágil durante la sesión.",
+                    que_podes_hacer: "Qué podés hacer",
+                    q1: "Controlar el sistema desde el celular",
+                    q2: "Usar Mosquito de forma más cómoda durante el entrenamiento",
+                    q3: "Reducir interrupciones entre ejercicios o evaluaciones",
+                    q4: "Acceder rápidamente a una experiencia pensada para el uso deportivo",
+                },
+                botones: {
+                    auto: "Descargar según mi dispositivo",
+                    android: "Google Play",
+                    ios: "App Store",
+                },
             },
             productos: {
                 titulo: "Productos",
@@ -166,7 +188,7 @@
         },
 
         en: {
-            nav: { inicio: "Home", productos: "Products", nosotros: "About Us", consultas: "Contact" },
+            nav: { inicio: "Home", productos: "Products", aplicacion: "App", nosotros: "About Us", consultas: "Contact" },
             hero: {
                 subtitulo: "Train with precision",
                 descripcion: "Stop correcting blindly. Turn feedback into measurable progress.",
@@ -182,6 +204,28 @@
                 b3_titulo: "Delayed visual feedback",
                 b3_desc: "Review your technique right after training and spot improvements without distractions.",
                 cta: "Discover the product",
+            },
+            app: {
+                hero: {
+                    titulo: "VasTech App",
+                    subtitulo: "Control Mosquito from your phone and make training simpler, faster, and more practical.",
+                    cta: "Download app",
+                },
+                contenido: {
+                    titulo: "A simpler way to use Mosquito",
+                    nombre: "VasTech App",
+                    descripcion: "The app lets you control Mosquito from your phone to start, pause, and manage the system without relying on a mouse or keyboard. It is designed for coaches, trainers, and athletes who need a smoother experience during training.",
+                    que_podes_hacer: "What you can do",
+                    q1: "Control the system from your phone",
+                    q2: "Use Mosquito more comfortably during training",
+                    q3: "Reduce interruptions between exercises or assessments",
+                    q4: "Quickly access a sport-focused experience",
+                },
+                botones: {
+                    auto: "Download for my device",
+                    android: "Google Play",
+                    ios: "App Store",
+                },
             },
             productos: {
                 titulo: "Products",
@@ -301,7 +345,7 @@
         },
 
         pt: {
-            nav: { inicio: "Início", productos: "Produtos", nosotros: "Sobre nós", consultas: "Contato" },
+            nav: { inicio: "Início", productos: "Produtos", aplicacion: "Aplicativo", nosotros: "Sobre nós", consultas: "Contato" },
             hero: {
                 subtitulo: "Treine com precisão",
                 descripcion: "Pare de corrigir às cegas. Transforme feedback em progresso mensurável.",
@@ -317,6 +361,28 @@
                 b3_titulo: "Feedback visual diferido",
                 b3_desc: "Revise sua técnica logo após o treino e encontre oportunidades de melhoria sem distrações.",
                 cta: "Conheça o produto",
+            },
+            app: {
+                hero: {
+                    titulo: "Aplicativo VasTech",
+                    subtitulo: "Controle o Mosquito pelo celular e torne o treinamento mais simples, rápido e prático.",
+                    cta: "Baixar aplicativo",
+                },
+                contenido: {
+                    titulo: "Uma forma mais simples de usar o Mosquito",
+                    nombre: "App VasTech",
+                    descripcion: "O aplicativo permite controlar o Mosquito pelo celular para iniciar, pausar e gerenciar o sistema sem depender de mouse ou teclado. Foi pensado para treinadores, professores e atletas que precisam de uma experiência mais ágil durante a sessão.",
+                    que_podes_hacer: "O que você pode fazer",
+                    q1: "Controlar o sistema pelo celular",
+                    q2: "Usar o Mosquito de forma mais confortável durante o treino",
+                    q3: "Reduzir interrupções entre exercícios ou avaliações",
+                    q4: "Acessar rapidamente uma experiência pensada para o uso esportivo",
+                },
+                botones: {
+                    auto: "Baixar conforme meu dispositivo",
+                    android: "Google Play",
+                    ios: "App Store",
+                },
             },
             productos: {
                 titulo: "Produtos",
