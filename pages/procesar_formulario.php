@@ -75,10 +75,10 @@ if (mb_strlen(trim($mensaje)) < 10) fail_redirect();
 
 // Producto permitido
 $productos_validos = [
-    "mosquito_basquet" => "Mosquito Básquet",
-    "mosquito_gym"     => "Mosquito Gym",
-    "bosco"            => "Bosco",
-    "combo"            => "Combo",
+    "mosquito_gym_bosco" => "Mosquito Gym + Bosco",
+    "mosquito_basquet"   => "Mosquito Básquet",
+    "mosquito_padel"     => "Mosquito Pádel",
+    "combo"              => "Combo",
 ];
 
 if (!array_key_exists($producto, $productos_validos)) {
